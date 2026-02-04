@@ -23,8 +23,7 @@
 
 ## 🧩 Featured Open Source
 
-- **Scholar High Lights** — Open-source Google Scholar extension for highlighting and organizing research papers.  
-  [GitHub](https://github.com/tonyyunyang/Scholar-High-Lights)
+- **Scholar High Lights** — Open-source Google Scholar extension for highlighting and organizing research papers. [GitHub](https://github.com/tonyyunyang/Scholar-High-Lights)
 
 ## 🔬 Featured Research
 
