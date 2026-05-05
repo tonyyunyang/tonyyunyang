@@ -70,9 +70,11 @@
   <text x="1220" y="316" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="#4A5159" opacity="0.78">and we tinker here.</text>
 
   <!-- ===================== LEFT: NAME + ROLE + TAGLINE ===================== -->
-  <!-- Big name centered vertically -->
-  <text x="60" y="180" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-weight="400" font-size="96" letter-spacing="-0.012em" fill="#0F1417">Tony Yang</text>
-  <text x="490" y="180" font-family="LXGW WenKai, Songti SC, STSong, Source Han Serif, Source Han Serif SC, serif" font-weight="500" font-size="48" letter-spacing="0.02em" fill="#4A5159">杨童耘</text>
+  <!-- Big name centered vertically. No negative tracking so the bowl
+       of the "g" doesn't cosy up to the Chinese block; Chinese sits
+       at x=525 to leave a clear sliver of air after "Yang". -->
+  <text x="60" y="180" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-weight="400" font-size="96" fill="#0F1417">Tony Yang</text>
+  <text x="525" y="180" font-family="LXGW WenKai, Songti SC, STSong, Source Han Serif, Source Han Serif SC, serif" font-weight="500" font-size="44" letter-spacing="0.04em" fill="#4A5159">杨童耘</text>
 
   <!-- Role line in mono caps, ink-soft -->
   <text x="62" y="216" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="13" letter-spacing="0.2em" fill="#0F1417">INDEPENDENT AI RESEARCHER · AMSTERDAM</text>

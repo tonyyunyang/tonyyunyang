@@ -26,25 +26,18 @@
 </p>
 
 <!-- ============================================================
-     QUICK LINKS — themed badges, emerald accent on cocoa label
+     QUICK LINKS · light, editorial flat-square pills
+     The banner already carries the tagline. The pills sit just below
+     it as a quiet directory, not a second hero. paper-shade label +
+     emerald body keeps them in the same key as the plate.
      ============================================================ -->
 
 <p align="center">
-  <a href="https://tonyyunyang.github.io/"><img alt="Studio · personal site" src="https://img.shields.io/badge/Studio-tonyyunyang.github.io-0E5347?style=for-the-badge&labelColor=14110D&logo=safari&logoColor=F5EFE2"></a>
-  <a href="https://scholar.google.com/citations?hl=en&user=rIFdBYAAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/Scholar-Profile-0E5347?style=for-the-badge&labelColor=14110D&logo=google-scholar&logoColor=F5EFE2"></a>
-  <a href="mailto:tonyyunyang@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-tonyyunyang@outlook.com-0E5347?style=for-the-badge&labelColor=14110D&logo=maildotru&logoColor=F5EFE2"></a>
-  <a href="https://tonyyunyang.github.io/cv-en.pdf"><img alt="CV English" src="https://img.shields.io/badge/CV-English-0E5347?style=for-the-badge&labelColor=14110D&logo=readthedocs&logoColor=F5EFE2"></a>
-  <a href="https://tonyyunyang.github.io/cv-zh.pdf"><img alt="CV 中文" src="https://img.shields.io/badge/CV-%E4%B8%AD%E6%96%87-0E5347?style=for-the-badge&labelColor=14110D&logo=readthedocs&logoColor=F5EFE2"></a>
-</p>
-
-<!-- ============================================================
-     TYPING TAGLINE — cycles through identity lines, emerald
-     ============================================================ -->
-
-<p align="center">
-  <a href="https://tonyyunyang.github.io/">
-    <img alt="rotating tagline" src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=400&size=24&duration=3600&pause=900&color=0E5347&center=true&vCenter=true&width=720&height=40&lines=building+useful%2C+durable+AI;hand-drawn+research+from+Amsterdam;across+LLMs%2C+vision%2C+world+models%2C+clinical+AI;open+to+research+%C2%B7+academia+or+industry">
-  </a>
+  <a href="https://tonyyunyang.github.io/"><img alt="Studio · personal site" src="https://img.shields.io/badge/Studio-tonyyunyang.github.io-0E5347?style=flat-square&labelColor=EDE6D5&logo=safari&logoColor=0E5347"></a>
+  <a href="https://scholar.google.com/citations?hl=en&user=rIFdBYAAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/Scholar-Profile-0E5347?style=flat-square&labelColor=EDE6D5&logo=google-scholar&logoColor=0E5347"></a>
+  <a href="mailto:tonyyunyang@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-tonyyunyang@outlook.com-0E5347?style=flat-square&labelColor=EDE6D5&logo=maildotru&logoColor=0E5347"></a>
+  <a href="https://tonyyunyang.github.io/cv-en.pdf"><img alt="CV English" src="https://img.shields.io/badge/CV-English-0E5347?style=flat-square&labelColor=EDE6D5&logo=readthedocs&logoColor=0E5347"></a>
+  <a href="https://tonyyunyang.github.io/cv-zh.pdf"><img alt="CV 中文" src="https://img.shields.io/badge/CV-%E4%B8%AD%E6%96%87-0E5347?style=flat-square&labelColor=EDE6D5&logo=readthedocs&logoColor=0E5347"></a>
 </p>
 
 <!-- A small editorial flourish to break into sections -->
@@ -211,16 +204,22 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 
 <p align="center">
   <a href="https://github.com/tonyyunyang/tonyyunyang.github.io">
-    <img alt="tonyyunyang.github.io · personal site" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=tonyyunyang.github.io&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347#gh-light-mode-only">
-    <img alt="tonyyunyang.github.io · personal site" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=tonyyunyang.github.io&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795#gh-dark-mode-only">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=tonyyunyang.github.io&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795">
+      <img alt="tonyyunyang.github.io · personal site" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=tonyyunyang.github.io&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347">
+    </picture>
   </a>
   <a href="https://github.com/tonyyunyang/Scholar-High-Lights">
-    <img alt="Scholar High Lights · Chrome extension" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=Scholar-High-Lights&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347#gh-light-mode-only">
-    <img alt="Scholar High Lights · Chrome extension" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=Scholar-High-Lights&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795#gh-dark-mode-only">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=Scholar-High-Lights&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795">
+      <img alt="Scholar High Lights · Chrome extension" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=Scholar-High-Lights&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347">
+    </picture>
   </a>
   <a href="https://github.com/tonyyunyang/pruning_nnunet">
-    <img alt="pruning_nnunet · MIDL '25 code" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=pruning_nnunet&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347#gh-light-mode-only">
-    <img alt="pruning_nnunet · MIDL '25 code" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=pruning_nnunet&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795#gh-dark-mode-only">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=pruning_nnunet&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795">
+      <img alt="pruning_nnunet · MIDL '25 code" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=pruning_nnunet&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347">
+    </picture>
   </a>
 </p>
 
@@ -259,19 +258,41 @@ Reference implementation for our **MIDL '25 paper** on pruning trained nnU-Net m
 </p>
 
 <!-- ============================================================
-     §03 · STACK — skillicons themed
+     §03 · STACK · monoline pills, no vendor color
+     The skillicons API renders saturated brand-colored squares that
+     became the loudest field on the page. Swapped for shields.io
+     flat pills that share the page palette (paper-shade label,
+     emerald body) so the stack reads as a list of tools, not a
+     parade of logos.
      ============================================================ -->
 
 ## §03 · Stack
 
+<p align="center"><i>Daily</i></p>
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img alt="tech stack" src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,cuda,unity,cpp,c,ts,react,nodejs,docker,linux,git,github,vscode,latex&theme=light&perline=8#gh-light-mode-only">
-    <img alt="tech stack" src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,cuda,unity,cpp,c,ts,react,nodejs,docker,linux,git,github,vscode,latex&theme=dark&perline=8#gh-dark-mode-only">
-  </a>
+  <img alt="Python" src="https://img.shields.io/badge/-Python-0E5347?style=flat-square&labelColor=EDE6D5&logo=python&logoColor=0E5347">
+  <img alt="PyTorch" src="https://img.shields.io/badge/-PyTorch-0E5347?style=flat-square&labelColor=EDE6D5&logo=pytorch&logoColor=0E5347">
+  <img alt="CUDA" src="https://img.shields.io/badge/-CUDA-0E5347?style=flat-square&labelColor=EDE6D5&logo=nvidia&logoColor=0E5347">
+  <img alt="LaTeX" src="https://img.shields.io/badge/-LaTeX-0E5347?style=flat-square&labelColor=EDE6D5&logo=latex&logoColor=0E5347">
 </p>
 
-<sub align="center"><p align="center"><i>Daily: PyTorch · Python · CUDA. Often: Unity (XR) · TypeScript · LaTeX. Sometimes: C++ · React · Docker.</i></p></sub>
+<p align="center"><i>Often</i></p>
+<p align="center">
+  <img alt="TensorFlow" src="https://img.shields.io/badge/-TensorFlow-4A5159?style=flat-square&labelColor=EDE6D5&logo=tensorflow&logoColor=4A5159">
+  <img alt="Unity (XR)" src="https://img.shields.io/badge/-Unity_(XR)-4A5159?style=flat-square&labelColor=EDE6D5&logo=unity&logoColor=4A5159">
+  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-4A5159?style=flat-square&labelColor=EDE6D5&logo=typescript&logoColor=4A5159">
+  <img alt="C++" src="https://img.shields.io/badge/-C%2B%2B-4A5159?style=flat-square&labelColor=EDE6D5&logo=cplusplus&logoColor=4A5159">
+  <img alt="Linux" src="https://img.shields.io/badge/-Linux-4A5159?style=flat-square&labelColor=EDE6D5&logo=linux&logoColor=4A5159">
+</p>
+
+<p align="center"><i>Reach for</i></p>
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/-React-9C8F77?style=flat-square&labelColor=EDE6D5&logo=react&logoColor=9C8F77">
+  <img alt="Node.js" src="https://img.shields.io/badge/-Node.js-9C8F77?style=flat-square&labelColor=EDE6D5&logo=nodedotjs&logoColor=9C8F77">
+  <img alt="Docker" src="https://img.shields.io/badge/-Docker-9C8F77?style=flat-square&labelColor=EDE6D5&logo=docker&logoColor=9C8F77">
+  <img alt="C" src="https://img.shields.io/badge/-C-9C8F77?style=flat-square&labelColor=EDE6D5&logo=c&logoColor=9C8F77">
+  <img alt="Git" src="https://img.shields.io/badge/-Git-9C8F77?style=flat-square&labelColor=EDE6D5&logo=git&logoColor=9C8F77">
+</p>
 
 <p align="center">
   <picture>
@@ -289,19 +310,25 @@ Reference implementation for our **MIDL '25 paper** on pruning trained nnU-Net m
 
 <p align="center">
   <a href="https://github.com/tonyyunyang">
-    <img alt="GitHub stats" height="170" src="https://github-readme-stats.vercel.app/api?username=tonyyunyang&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347&ring_color=0E5347#gh-light-mode-only">
-    <img alt="GitHub stats" height="170" src="https://github-readme-stats.vercel.app/api?username=tonyyunyang&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795&ring_color=5BC795#gh-dark-mode-only">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=tonyyunyang&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795&ring_color=5BC795">
+      <img alt="GitHub stats" height="170" src="https://github-readme-stats.vercel.app/api?username=tonyyunyang&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347&ring_color=0E5347">
+    </picture>
   </a>
   <a href="https://github.com/tonyyunyang">
-    <img alt="Top languages" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tonyyunyang&hide_border=true&layout=compact&langs_count=8&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417#gh-light-mode-only">
-    <img alt="Top languages" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tonyyunyang&hide_border=true&layout=compact&langs_count=8&bg_color=14110D&title_color=5BC795&text_color=EFE4CE#gh-dark-mode-only">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=tonyyunyang&hide_border=true&layout=compact&langs_count=8&bg_color=14110D&title_color=5BC795&text_color=EFE4CE">
+      <img alt="Top languages" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tonyyunyang&hide_border=true&layout=compact&langs_count=8&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417">
+    </picture>
   </a>
 </p>
 
 <p align="center">
   <a href="https://git.io/streak-stats">
-    <img alt="GitHub streak" height="170" src="https://streak-stats.demolab.com?user=tonyyunyang&hide_border=true&background=F5EFE2&stroke=D9D2C2&ring=0E5347&fire=0E5347&currStreakLabel=0E5347&currStreakNum=0F1417&sideLabels=0F1417&sideNums=0F1417&dates=4A5159#gh-light-mode-only">
-    <img alt="GitHub streak" height="170" src="https://streak-stats.demolab.com?user=tonyyunyang&hide_border=true&background=14110D&stroke=2F261C&ring=5BC795&fire=5BC795&currStreakLabel=5BC795&currStreakNum=EFE4CE&sideLabels=EFE4CE&sideNums=EFE4CE&dates=9C8F77#gh-dark-mode-only">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=tonyyunyang&hide_border=true&background=14110D&stroke=2F261C&ring=5BC795&fire=5BC795&currStreakLabel=5BC795&currStreakNum=EFE4CE&sideLabels=EFE4CE&sideNums=EFE4CE&dates=9C8F77">
+      <img alt="GitHub streak" height="170" src="https://streak-stats.demolab.com?user=tonyyunyang&hide_border=true&background=F5EFE2&stroke=D9D2C2&ring=0E5347&fire=0E5347&currStreakLabel=0E5347&currStreakNum=0F1417&sideLabels=0F1417&sideNums=0F1417&dates=4A5159">
+    </picture>
   </a>
 </p>
 
@@ -380,13 +407,13 @@ For collaborations, PhD opportunities, or research roles in academia or industry
 </td>
 <td valign="top" width="40%" align="right">
 
-<a href="mailto:tonyyunyang@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-tonyyunyang@outlook.com-0E5347?style=for-the-badge&labelColor=14110D&logo=maildotru&logoColor=F5EFE2"></a>
+<a href="mailto:tonyyunyang@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-tonyyunyang@outlook.com-0E5347?style=flat-square&labelColor=EDE6D5&logo=maildotru&logoColor=0E5347"></a>
 <br>
-<a href="https://tonyyunyang.github.io/"><img alt="Studio" src="https://img.shields.io/badge/Studio-tonyyunyang.github.io-0E5347?style=for-the-badge&labelColor=14110D&logo=safari&logoColor=F5EFE2"></a>
+<a href="https://tonyyunyang.github.io/"><img alt="Studio" src="https://img.shields.io/badge/Studio-tonyyunyang.github.io-0E5347?style=flat-square&labelColor=EDE6D5&logo=safari&logoColor=0E5347"></a>
 <br>
-<a href="https://scholar.google.com/citations?hl=en&user=rIFdBYAAAAAJ"><img alt="Scholar" src="https://img.shields.io/badge/Scholar-Profile-0E5347?style=for-the-badge&labelColor=14110D&logo=google-scholar&logoColor=F5EFE2"></a>
+<a href="https://scholar.google.com/citations?hl=en&user=rIFdBYAAAAAJ"><img alt="Scholar" src="https://img.shields.io/badge/Scholar-Profile-0E5347?style=flat-square&labelColor=EDE6D5&logo=google-scholar&logoColor=0E5347"></a>
 <br>
-<a href="https://github.com/tonyyunyang"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-tonyyunyang-0F1417?style=for-the-badge&labelColor=F5EFE2&logo=github&logoColor=0F1417"></a>
+<a href="https://github.com/tonyyunyang"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-tonyyunyang-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a>
 
 </td>
 </tr>

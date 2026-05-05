@@ -29,14 +29,17 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          # Render light + dark + a default in one pass.
-          # Palette mirrors the README's Atelier × Cinema design tokens:
-          #   light: cream paper, ink dot, emerald snake, emerald food trail
-          #   dark:  cocoa paper, cream dots, brighter emerald snake/trail
+          # Render light + dark + a default in one pass. The palette
+          # uses exact Atelier × Cinema design tokens (no off-token
+          # interpolated greens), so the contribution grid feels like
+          # an extension of the rest of the README, not a separate
+          # widget. Five colors: surface, hairline, ink-soft, accent,
+          # ink — light-to-dark intensity for the four contribution
+          # bands, with the snake itself using the accent.
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-snake.svg?palette=github-light&color_snake=%230E5347&color_dots=%23EDE6D5,%23B7CFB1,%2378B58F,%230E5347,%230B3D33
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=%235BC795&color_dots=%231F1A14,%2334573F,%23548E6A,%235BC795,%2398E3BC
+            dist/github-snake.svg?palette=github-light&color_snake=%230E5347&color_dots=%23EDE6D5,%23D9D2C2,%234A5159,%230E5347,%230F1417
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=%235BC795&color_dots=%231D1812,%232F261C,%239C8F77,%235BC795,%23EFE4CE
 
       - name: push SVGs to the `output` branch
         uses: crazy-max/ghaction-github-pages@v4
