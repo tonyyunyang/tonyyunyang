@@ -314,10 +314,14 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
   </a>
 </p>
 
+<!-- IMPORTANT: srcset treats commas as image-candidate separators, so any
+     URL with commas (like title=Followers,Repositories,...) gets truncated
+     to the first item ("Followers"). Encode commas as %2C in srcset URLs.
+     The img src below uses raw commas because src is parsed as a single URL. -->
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=5BC795&text_color=EFE4CE&bg_color=14110D&secondary_text_color=9C8F77&title=Followers,Repositories,Stars,Commits,Issues,PullRequest">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=5BC795&text_color=EFE4CE&bg_color=14110D&secondary_text_color=9C8F77&title=Followers%2CRepositories%2CStars%2CCommits%2CIssues%2CPullRequest">
       <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=0E5347&text_color=0F1417&bg_color=F5EFE2&secondary_text_color=4A5159&title=Followers,Repositories,Stars,Commits,Issues,PullRequest">
     </picture>
   </a>
