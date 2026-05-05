@@ -14,7 +14,7 @@
 -->
 
 <!-- ============================================================
-     HERO BANNER — light/dark adaptive via <picture>
+     HERO BANNER · light/dark adaptive via <picture>
      ============================================================ -->
 
 <p align="center">
@@ -50,7 +50,7 @@
 </p>
 
 <!-- ============================================================
-     §00 · CURRENTLY — what I'm doing right now
+     §00 · CURRENTLY · what I'm doing right now
      ============================================================ -->
 
 ## §00 · Currently
@@ -89,7 +89,7 @@ The throughline I care about: useful, durable AI, especially where access and re
 </p>
 
 <!-- ============================================================
-     §01 · RESEARCH — featured papers as rich cards
+     §01 · RESEARCH · featured papers as rich cards
      ============================================================ -->
 
 ## §01 · Research
@@ -197,7 +197,7 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 </p>
 
 <!-- ============================================================
-     §02 · OPEN SOURCE — featured repos as cards
+     §02 · OPEN SOURCE · featured repos as cards
      ============================================================ -->
 
 ## §02 · Open Source
@@ -294,7 +294,7 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </p>
 
 <!-- ============================================================
-     §04 · OPEN THE WORKSHOP — stats cards + snake graph
+     §04 · OPEN THE WORKSHOP · stats cards + snake graph
      ============================================================ -->
 
 ## §04 · Open the workshop
@@ -323,7 +323,7 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
   </picture>
 </p>
 
-<sub align="center"><p align="center"><i>Both regenerated twice daily by GitHub Actions.</i></p></sub>
+<p align="center"><sub><i>Both regenerated twice daily by GitHub Actions.</i></sub></p>
 
 <p align="center">
   <picture>
@@ -334,7 +334,7 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </p>
 
 <!-- ============================================================
-     §05 · OFF THE PAGE — personality
+     §05 · OFF THE PAGE · personality
      ============================================================ -->
 
 ## §05 · Off the page
@@ -362,7 +362,7 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </tr>
 </table>
 
-<sub align="center"><p align="center"><i>For more, step into the <a href="https://tonyyunyang.github.io/world/">Studio</a> · a hand-drawn cross-section of the room.</i></p></sub>
+<p align="center"><sub><i>For more, step into the <a href="https://tonyyunyang.github.io/world/">Studio</a> · a hand-drawn cross-section of the room.</i></sub></p>
 
 <p align="center">
   <picture>
@@ -402,7 +402,7 @@ For collaborations, PhD opportunities, or research roles in academia or industry
 </table>
 
 <!-- ============================================================
-     FOOTER — italic margin annotation, plate colophon
+     FOOTER · italic margin annotation, plate colophon
      ============================================================ -->
 
 <br>

@@ -34,7 +34,7 @@ if (!TOKEN) {
   process.exit(1);
 }
 
-// Color tokens — keep these in lockstep with assets/banner-*.svg + globals.css.
+// Color tokens · keep these in lockstep with assets/banner-*.svg + globals.css.
 const TOKENS = {
   light: {
     paper: "#F5EFE2",
@@ -163,7 +163,7 @@ function lastNDays(days, n) {
 
 // Convert ISO date -> "MMM D, YYYY" without locale gotchas
 function fmt(iso) {
-  if (!iso) return "—";
+  if (!iso) return "·";
   const d = new Date(iso + "T00:00:00Z");
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   return `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
@@ -174,7 +174,7 @@ function svg(theme, stats) {
   const t = TOKENS[theme];
   const { total, current, longest, currentRange, longestRange: lr, last30, last49 } = stats;
 
-  // Sparkline — 30 days, area chart
+  // Sparkline · 30 days, area chart
   const SPARK_X = 60;
   const SPARK_Y = 196;
   const SPARK_W = 540;
@@ -189,7 +189,7 @@ function svg(theme, stats) {
   const sparkPath = sparkPts.map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
   const sparkArea = `${sparkPath} L ${(SPARK_X + SPARK_W).toFixed(1)} ${(SPARK_Y + SPARK_H).toFixed(1)} L ${SPARK_X.toFixed(1)} ${(SPARK_Y + SPARK_H).toFixed(1)} Z`;
 
-  // Mini grid — 7×7 = last 49 days, 6×6 px cells
+  // Mini grid · 7×7 = last 49 days, 6×6 px cells
   const GRID_X = 670;
   const GRID_Y = 192;
   const CELL = 7;
@@ -216,7 +216,7 @@ function svg(theme, stats) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" role="img" aria-label="Workshop ledger · ${theme} · contribution stats for ${USER}">
   <title>Workshop ledger · contribution stats for ${USER}</title>
-  <desc>A hand-drawn editorial plate showing the total contributions in the trailing 12 months (${total}), current streak (${current} days), longest streak (${longest} days), and a 30-day activity sparkline. Generated nightly by GitHub Actions.</desc>
+  <desc>A hand-drawn editorial plate showing the total contributions in the trailing 12 months (${total}), current streak (${current} days), longest streak (${longest} days), and a 30-day activity sparkline. Regenerated twice daily by GitHub Actions.</desc>
   <defs>
     <pattern id="hatch-${theme}" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(35)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="${t.ink}" stroke-width="0.45" opacity="${theme === "dark" ? 0.32 : 0.45}"/>
@@ -268,7 +268,7 @@ function svg(theme, stats) {
   <text x="600" y="100" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.2em" fill="${t.inkSoft}">LONGEST STREAK</text>
   <text x="600" y="146" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-weight="400" font-size="56" fill="${t.ink}">${longest}</text>
   <text x="${600 + measureNumber(longest) + 12}" y="146" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="20" fill="${t.inkSoft}">${longest === 1 ? "day" : "days"}</text>
-  <text x="600" y="170" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="${t.inkSoft}">${lr ? `${fmt(lr.first)} → ${fmt(lr.last)}` : "—"}</text>
+  <text x="600" y="170" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="${t.inkSoft}">${lr ? `${fmt(lr.first)} → ${fmt(lr.last)}` : "·"}</text>
 
   <!-- Sparkline label -->
   <text x="60" y="190" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.2em" fill="${t.inkSoft}">ACTIVITY · LAST 30 DAYS</text>
@@ -284,7 +284,7 @@ function svg(theme, stats) {
   ${gridCells}
 
   <!-- Bottom colophon -->
-  <text x="60" y="244" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.22em" fill="${t.inkSoft}">REGENERATED NIGHTLY · GITHUB ACTIONS</text>
+  <text x="60" y="244" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.22em" fill="${t.inkSoft}">REGENERATED TWICE DAILY · GITHUB ACTIONS</text>
   <text x="820" y="244" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="13" fill="${t.inkSoft}">measure twice, ship once.</text>
 </svg>
 `;

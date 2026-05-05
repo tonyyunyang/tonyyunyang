@@ -36,7 +36,7 @@ jobs:
       # exact Atelier × Cinema design tokens (no off-token interpolated
       # greens), so the contribution grid feels like an extension of the
       # rest of the README, not a separate widget. Five colors per ramp:
-      # surface, hairline, ink-soft, accent, ink — light-to-dark
+      # surface, hairline, ink-soft, accent, ink · light-to-dark
       # intensity for the four contribution bands, with the snake using
       # the accent.
       - name: generate snake SVGs
