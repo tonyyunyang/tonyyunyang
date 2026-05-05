@@ -194,15 +194,18 @@ function svg(theme, stats) {
   const GRID_Y = 192;
   const CELL = 7;
   const GAP = 2;
+  // Empty cells use the ink-soft mark at low alpha so they're visibly
+  // present against the paper without competing with active days. Active
+  // cells go through a four-step accent ramp for legibility.
   const gridCells = last49.map((d, i) => {
     const col = Math.floor(i / 7);
     const row = i % 7;
     const x = GRID_X + col * (CELL + GAP);
     const y = GRID_Y + row * (CELL + GAP);
     let fill;
-    if (d.count === 0) fill = t.hairline;
-    else if (d.count < 3) fill = withAlpha(t.accent, 0.35);
-    else if (d.count < 7) fill = withAlpha(t.accent, 0.65);
+    if (d.count === 0) fill = withAlpha(t.inkSoft, 0.18);
+    else if (d.count < 3) fill = withAlpha(t.accent, 0.45);
+    else if (d.count < 7) fill = withAlpha(t.accent, 0.75);
     else if (d.count < 12) fill = t.accent;
     else fill = t.ink;
     return `<rect x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="1" fill="${fill}"/>`;
@@ -259,7 +262,7 @@ function svg(theme, stats) {
   <text x="320" y="100" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.2em" fill="${t.inkSoft}">CURRENT STREAK</text>
   <text x="320" y="146" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-weight="400" font-size="56" fill="${t.accent}">${current}</text>
   <text x="${320 + measureNumber(current) + 12}" y="146" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="20" fill="${t.inkSoft}">${current === 1 ? "day" : "days"}</text>
-  <text x="320" y="170" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="${t.inkSoft}">${current > 0 ? `${fmt(currentRange.first)} → ${fmt(currentRange.last)}` : "—"}</text>
+  <text x="320" y="170" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="${t.inkSoft}">${current > 0 ? `${fmt(currentRange.first)} → ${fmt(currentRange.last)}` : daysSinceLastContribution(days)}</text>
 
   <!-- Column 3: longest streak -->
   <text x="600" y="100" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.2em" fill="${t.inkSoft}">LONGEST STREAK</text>
@@ -301,6 +304,20 @@ function withAlpha(hex, a) {
   const g = parseInt(h.slice(2, 4), 16);
   const b = parseInt(h.slice(4, 6), 16);
   return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+
+// When the current streak is 0, show how many days ago the last
+// contribution was, so the column doesn't read as broken/empty.
+function daysSinceLastContribution(days) {
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].count > 0) {
+      const gap = days.length - 1 - i;
+      if (gap === 0) return "today";
+      if (gap === 1) return "yesterday";
+      return `${gap} days since the last commit`;
+    }
+  }
+  return "no commits in window";
 }
 
 // ----------------------------------------------------------------- main
