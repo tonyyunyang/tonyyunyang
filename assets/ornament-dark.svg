@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 24" role="img" aria-label="section ornament">
+  <g stroke="#9C8F77" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <path d="M2 12 Q60 4 130 12" stroke-width="1"/>
+    <circle cx="130" cy="12" r="1.5" fill="#9C8F77" stroke="none"/>
+    <path d="M140 12 Q150 -2 170 -2 Q190 -2 200 12 Q210 26 230 26 Q250 26 260 12" stroke-width="1.3"/>
+    <circle cx="200" cy="12" r="2.2" fill="#5BC795" stroke="none"/>
+    <path d="M270 12 Q300 22 330 14 Q360 6 410 12" stroke-width="1"/>
+    <path d="M410 12 L478 12" stroke-width="1"/>
+    <circle cx="270" cy="12" r="1.5" fill="#9C8F77" stroke="none"/>
+  </g>
+</svg>

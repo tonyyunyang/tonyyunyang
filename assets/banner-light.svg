@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-label="Tony Yang · Independent AI Researcher · Amsterdam">
+  <title>Tony Yang · Independent AI Researcher · Amsterdam</title>
+  <desc>Editorial banner in the Atelier × Cinema design language. Name in upright EB Garamond with the Chinese name 杨童耘, role line in mono caps, hand-drawn flourish, italic tagline, and a small Plate-style sketch of a candlelit window onto code.</desc>
+
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#0F1417" stroke-width="0.45" opacity="0.45"/>
+    </pattern>
+    <pattern id="hatchFine" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(-30)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#0F1417" stroke-width="0.3" opacity="0.32"/>
+    </pattern>
+    <radialGradient id="moonHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FAF1D8" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#FAF1D8" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#FAF1D8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampPool" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#FAF1D8" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FAF1D8" stop-opacity="0"/>
+    </radialGradient>
+    <style><![CDATA[
+      @keyframes twinkle  { 0%,100% { opacity: 1 } 50% { opacity: 0.25 } }
+      @keyframes haloPulse { 0%,100% { opacity: 0.7; transform: scale(0.95) } 50% { opacity: 1; transform: scale(1.05) } }
+      @keyframes flameFlicker { 0%,100% { transform: scale(1) rotate(-1deg) } 50% { transform: scale(1.06) rotate(2deg) } }
+      @keyframes steamRise { 0% { transform: translate(0,0); opacity: 0.85 } 100% { transform: translate(0,-6px); opacity: 0 } }
+      @keyframes lampBreathe { 0%,100% { opacity: 0.85 } 50% { opacity: 1 } }
+      @keyframes cursorBlink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+      .star    { animation: twinkle 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .star-b  { animation-duration: 3.6s; animation-delay: 0.4s; }
+      .star-c  { animation-duration: 2.2s; animation-delay: 0.9s; }
+      .moon-halo { animation: haloPulse 4.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .candle-flame { animation: flameFlicker 1.6s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center bottom; }
+      .lamp-pool { animation: lampBreathe 4.2s ease-in-out infinite; }
+      .steam { animation: steamRise 2.6s ease-out infinite; transform-box: fill-box; }
+      .steam-b { animation-duration: 3.0s; animation-delay: 0.5s; }
+      .cursor-blink { animation: cursorBlink 1.1s steps(2) infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        .star, .moon-halo, .candle-flame, .lamp-pool, .steam, .cursor-blink { animation: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Page -->
+  <rect x="0" y="0" width="1280" height="360" fill="#F5EFE2"/>
+  <!-- Subtle paper grain via thin diagonal lines (decorative, low-opacity) -->
+  <rect x="0" y="0" width="1280" height="360" fill="url(#hatchFine)" opacity="0.22"/>
+
+  <!-- Outer dashed frame -->
+  <rect x="16" y="16" width="1248" height="328" fill="none" stroke="#0F1417" stroke-width="0.7" stroke-dasharray="3 5" opacity="0.55"/>
+  <!-- Inner solid frame -->
+  <rect x="26" y="26" width="1228" height="308" fill="none" stroke="#0F1417" stroke-width="1.2"/>
+
+  <!-- Hatched engraving corners -->
+  <rect x="26" y="26" width="80" height="14" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="26" y="26" width="14" height="80" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="1174" y="26" width="80" height="14" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="1240" y="26" width="14" height="80" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="26" y="320" width="80" height="14" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="26" y="254" width="14" height="80" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="1174" y="320" width="80" height="14" fill="url(#hatch)" opacity="0.6"/>
+  <rect x="1240" y="254" width="14" height="80" fill="url(#hatch)" opacity="0.6"/>
+
+  <!-- Plate labels: top-left & top-right corners (mono caps) -->
+  <text x="60" y="56" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="#4A5159">§ PLATE GH · OPEN SOURCE</text>
+  <text x="1220" y="56" text-anchor="end" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="#4A5159">AMSTERDAM · 2026</text>
+
+  <!-- Plate labels: bottom -->
+  <text x="60" y="316" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.2em" fill="#4A5159">§ N° 01 · IDENTITY</text>
+  <text x="1220" y="316" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="#4A5159" opacity="0.78">and we tinker here.</text>
+
+  <!-- ===================== LEFT: NAME + ROLE + TAGLINE ===================== -->
+  <!-- Big name centered vertically -->
+  <text x="60" y="180" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-weight="400" font-size="96" letter-spacing="-0.012em" fill="#0F1417">Tony Yang</text>
+  <text x="490" y="180" font-family="LXGW WenKai, Songti SC, STSong, Source Han Serif, Source Han Serif SC, serif" font-weight="500" font-size="48" letter-spacing="0.02em" fill="#4A5159">杨童耘</text>
+
+  <!-- Role line in mono caps, ink-soft -->
+  <text x="62" y="216" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="13" letter-spacing="0.2em" fill="#0F1417">INDEPENDENT AI RESEARCHER · AMSTERDAM</text>
+
+  <!-- Hand-drawn flourish under the role line -->
+  <g transform="translate(60, 232)" stroke="#4A5159" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.65">
+    <path d="M0 8 Q40 0 84 8" stroke-width="1"/>
+    <circle cx="84" cy="8" r="1.4" fill="#4A5159" stroke="none"/>
+    <path d="M92 8 Q98 -2 112 -2 Q126 -2 132 8 Q138 18 152 18 Q166 18 172 8" stroke-width="1.2"/>
+    <circle cx="132" cy="8" r="2" fill="#0E5347" stroke="none"/>
+    <path d="M180 8 Q200 16 220 10 Q240 4 264 8" stroke-width="1"/>
+    <path d="M264 8 L286 8" stroke-width="1"/>
+    <circle cx="180" cy="8" r="1.4" fill="#4A5159" stroke="none"/>
+  </g>
+
+  <!-- Italic tagline -->
+  <text x="60" y="278" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="26" fill="#4A5159">building useful, durable AI · across LLMs, vision, world models, clinical AI</text>
+
+  <!-- ===================== RIGHT: SMALL PLATE SKETCH ===================== -->
+  <!-- A compact "candlelit window onto code" — a window frame with the lit
+       interior visible, code-line patterns inside, a moon outside, and a
+       quill + inkwell on the sill below. Mirrors the website's Plate I in
+       miniature, recontextualised for the open-source desk. Scaled 0.78
+       and right-aligned so the sketch sits cleanly inside the inner frame. -->
+  <g transform="translate(870, 64) scale(0.84)">
+    <!-- moon halo + crescent (top-left of the sketch) -->
+    <circle class="moon-halo" cx="48" cy="40" r="34" fill="url(#moonHalo)" stroke="none" opacity="0.85"/>
+    <circle cx="48" cy="40" r="13" fill="#FAF1D8" stroke="#0F1417" stroke-width="1"/>
+    <path d="M48 27 A 13 13 0 0 1 61 40 A 13 13 0 0 1 48 53 A 11 11 0 0 0 48 27 Z" fill="#0F1417" opacity="0.16" stroke="none"/>
+    <!-- a few stars -->
+    <circle class="star" cx="92" cy="22" r="0.9" fill="#0F1417" opacity="0.75"/>
+    <circle class="star star-b" cx="110" cy="42" r="0.7" fill="#0F1417" opacity="0.55"/>
+    <circle class="star star-c" cx="124" cy="20" r="1.1" fill="#0F1417" opacity="0.7"/>
+    <path d="M124 14 L124 26 M118 20 L130 20" stroke="#0F1417" stroke-width="0.5" opacity="0.6"/>
+    <circle class="star star-b" cx="142" cy="36" r="0.7" fill="#0F1417" opacity="0.55"/>
+
+    <!-- arched window frame -->
+    <path d="M180 110 Q180 70 240 70 H320 Q380 70 380 110 V210 H180 Z" fill="#FAF1D8" stroke="#0F1417" stroke-width="1.4"/>
+    <!-- inner stroke -->
+    <path d="M188 118 Q188 78 240 78 H320 Q372 78 372 118 V202 H188 Z" fill="none" stroke="#0F1417" stroke-width="0.5" opacity="0.5"/>
+    <!-- mullion -->
+    <path d="M280 78 V202" stroke="#0F1417" stroke-width="1"/>
+    <!-- transom -->
+    <path d="M188 130 H372" stroke="#0F1417" stroke-width="0.7" opacity="0.7"/>
+    <!-- hatched corners -->
+    <rect x="180" y="110" width="14" height="6" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="180" y="110" width="6" height="14" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="366" y="110" width="14" height="6" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="374" y="110" width="6" height="14" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="180" y="204" width="14" height="6" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="180" y="190" width="6" height="14" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="366" y="204" width="14" height="6" fill="url(#hatch)" opacity="0.6"/>
+    <rect x="374" y="190" width="6" height="14" fill="url(#hatch)" opacity="0.6"/>
+    <!-- code lines inside the window panes -->
+    <g stroke="#0F1417" stroke-width="0.7" opacity="0.6" stroke-linecap="round">
+      <path d="M198 138 H224"/>
+      <path d="M228 138 H252"/>
+      <path d="M198 146 H218"/>
+      <path d="M222 146 H236"/>
+      <path d="M204 154 H226"/>
+      <path d="M198 162 H242"/>
+      <path d="M204 170 H230"/>
+      <path d="M198 178 H214"/>
+      <path d="M218 178 H246"/>
+      <path d="M198 186 H236"/>
+    </g>
+    <g stroke="#0E5347" stroke-width="0.7" opacity="0.7" stroke-linecap="round">
+      <path d="M286 138 H308"/>
+      <path d="M312 138 H332"/>
+      <path d="M292 146 H314"/>
+      <path d="M286 154 H322"/>
+      <path d="M286 162 H304"/>
+      <path d="M292 170 H324"/>
+      <path d="M286 178 H302"/>
+      <path d="M306 178 H326"/>
+      <path d="M286 186 H338"/>
+    </g>
+    <!-- a tiny block-cursor in the right pane -->
+    <rect class="cursor-blink" x="340" y="180" width="6" height="8" fill="#0E5347" opacity="0.8"/>
+
+    <!-- sill -->
+    <rect x="170" y="210" width="220" height="8" fill="#EDE6D5" stroke="#0F1417" stroke-width="1"/>
+    <path d="M174 220 H386" stroke="#0F1417" stroke-width="0.4" opacity="0.4" stroke-dasharray="1 3"/>
+
+    <!-- desk vignette under the sill: lamp + book + teacup -->
+    <!-- desk lamp pool of warm light -->
+    <ellipse class="lamp-pool" cx="232" cy="248" rx="60" ry="18" fill="url(#lampPool)" opacity="0.85"/>
+    <!-- candlestick (simple) -->
+    <rect x="206" y="232" width="6" height="20" fill="#EDE6D5" stroke="#0F1417" stroke-width="0.9"/>
+    <path d="M206 252 H212 M209 252 V258" stroke="#0F1417" stroke-width="0.8"/>
+    <path d="M201 258 Q209 261 217 258" stroke="#0F1417" stroke-width="0.8"/>
+    <!-- candle flame -->
+    <g class="candle-flame">
+      <path d="M209 232 Q207 226 209 220 Q211 226 209 232 Z" fill="#0E5347" opacity="0.6" stroke="none"/>
+      <path d="M209 232 Q207 224 209 216 Q211 224 209 232 Z" fill="#FAF1D8" stroke="#0F1417" stroke-width="0.6"/>
+    </g>
+    <!-- open book -->
+    <path d="M236 258 L284 258 L284 232 L260 230 L236 232 Z" fill="#FAF1D8" stroke="#0F1417" stroke-width="0.9"/>
+    <path d="M260 230 V258" stroke="#0F1417" stroke-width="0.7" opacity="0.7"/>
+    <g stroke="#0F1417" stroke-width="0.4" opacity="0.55">
+      <path d="M242 238 H256"/>
+      <path d="M242 242 H254"/>
+      <path d="M242 246 H256"/>
+      <path d="M242 250 H252"/>
+      <path d="M264 238 H278"/>
+      <path d="M264 242 H276"/>
+      <path d="M264 246 H280"/>
+      <path d="M264 250 H276"/>
+    </g>
+    <!-- teacup -->
+    <g>
+      <path d="M298 258 Q298 264 306 264 L320 264 Q328 264 328 258 V250 H298 Z" fill="#FAF1D8" stroke="#0F1417" stroke-width="0.8"/>
+      <ellipse cx="313" cy="250" rx="15" ry="2" fill="#0E5347" opacity="0.55" stroke="none"/>
+      <path d="M328 252 Q336 252 336 258 Q336 262 328 262" fill="none" stroke="#0F1417" stroke-width="0.7"/>
+      <!-- steam -->
+      <path class="steam" d="M304 248 Q302 242 306 236" fill="none" stroke="#0F1417" stroke-width="0.45" opacity="0.6"/>
+      <path class="steam steam-b" d="M314 248 Q312 242 316 236" fill="none" stroke="#0F1417" stroke-width="0.45" opacity="0.55"/>
+    </g>
+
+    <!-- plate colophon for the sketch -->
+    <text x="180" y="284" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.2em" fill="#4A5159" opacity="0.85">PLATE GH · DESK</text>
+    <text x="380" y="284" text-anchor="end" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.2em" fill="#4A5159" opacity="0.85">2026</text>
+  </g>
+
+  <!-- Decorative: vertical separator between left text and right sketch -->
+  <path d="M850 90 V270" stroke="#0F1417" stroke-width="0.4" opacity="0.35" stroke-dasharray="1 4"/>
+  <circle cx="850" cy="180" r="2" fill="#0E5347" stroke="none"/>
+</svg>

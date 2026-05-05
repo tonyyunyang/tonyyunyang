@@ -1,0 +1,7 @@
+# Local README rendering artifacts (used by tooling to preview the
+# README in browser-rendered light/dark, not part of the published profile).
+.preview/
+
+# OS noise
+.DS_Store
+*.swp
