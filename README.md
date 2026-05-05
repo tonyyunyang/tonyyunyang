@@ -202,48 +202,39 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 
 ## §02 · Open Source
 
-<p align="center">
-  <a href="https://github.com/tonyyunyang/tonyyunyang.github.io">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=tonyyunyang.github.io&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795">
-      <img alt="tonyyunyang.github.io · personal site" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=tonyyunyang.github.io&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347">
-    </picture>
-  </a>
-  <a href="https://github.com/tonyyunyang/Scholar-High-Lights">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=Scholar-High-Lights&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795">
-      <img alt="Scholar High Lights · Chrome extension" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=Scholar-High-Lights&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347">
-    </picture>
-  </a>
-  <a href="https://github.com/tonyyunyang/pruning_nnunet">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=pruning_nnunet&hide_border=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795">
-      <img alt="pruning_nnunet · MIDL '25 code" src="https://github-readme-stats.vercel.app/api/pin/?username=tonyyunyang&repo=pruning_nnunet&hide_border=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347">
-    </picture>
-  </a>
-</p>
-
 <table>
 <tr>
 <td valign="top" width="33%">
 
 ### <a href="https://github.com/tonyyunyang/tonyyunyang.github.io">tonyyunyang.github.io</a>
 
-Hand-built personal site in **Astro 5 + Tailwind v4**, single-author, no template ancestry. Atelier × Cinema design language with Pagefind search and a hand-drawn Studio scene.
+<sub><code>Astro</code> · <code>Tailwind v4</code> · <code>TypeScript</code></sub>
+
+Hand-built personal site, single-author, no template ancestry. Atelier × Cinema design language with Pagefind search and a hand-drawn Studio scene.
+
+<sub><a href="https://tonyyunyang.github.io/">Live →</a></sub>
 
 </td>
 <td valign="top" width="33%">
 
 ### <a href="https://github.com/tonyyunyang/Scholar-High-Lights">Scholar High Lights</a>
 
-Chrome extension for **highlighting and organizing research papers** on Google Scholar. Colored notes that persist across sessions, exportable for your own zettelkasten.
+<sub><code>JavaScript</code> · <code>Chrome ext</code></sub>
+
+Highlighting + organizing research papers on Google Scholar. Colored notes that persist across sessions, exportable for your own zettelkasten.
+
+<sub><a href="https://github.com/tonyyunyang/Scholar-High-Lights">Repo →</a></sub>
 
 </td>
 <td valign="top" width="33%">
 
 ### <a href="https://github.com/tonyyunyang/pruning_nnunet">pruning_nnunet</a>
 
-Reference implementation for our **MIDL '25 paper** on pruning trained nnU-Net models. Magnitude-based, 80%+ reduction, applicable to 2D & 3D configurations.
+<sub><code>Python</code> · <code>PyTorch</code> · <code>MIDL '25</code></sub>
+
+Reference implementation for our MIDL '25 paper on pruning trained nnU-Net models. Magnitude-based, 80%+ reduction, 2D & 3D.
+
+<sub><a href="https://openreview.net/forum?id=uTTOhthEDR">Paper →</a></sub>
 
 </td>
 </tr>
@@ -308,26 +299,35 @@ Reference implementation for our **MIDL '25 paper** on pruning trained nnU-Net m
 
 ## §04 · Open the workshop
 
-<p align="center">
-  <a href="https://github.com/tonyyunyang">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=tonyyunyang&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=14110D&title_color=5BC795&text_color=EFE4CE&icon_color=5BC795&ring_color=5BC795">
-      <img alt="GitHub stats" height="170" src="https://github-readme-stats.vercel.app/api?username=tonyyunyang&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417&icon_color=0E5347&ring_color=0E5347">
-    </picture>
-  </a>
-  <a href="https://github.com/tonyyunyang">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=tonyyunyang&hide_border=true&layout=compact&langs_count=8&bg_color=14110D&title_color=5BC795&text_color=EFE4CE">
-      <img alt="Top languages" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tonyyunyang&hide_border=true&layout=compact&langs_count=8&bg_color=F5EFE2&title_color=0E5347&text_color=0F1417">
-    </picture>
-  </a>
-</p>
+<!-- The github-readme-stats Vercel deployment hits its rate limit
+     daily ("DEPLOYMENT_PAUSED"), so this section uses providers that
+     stay up reliably: streak-stats.demolab.com, github-profile-trophy,
+     and github-readme-activity-graph. All themed to the same emerald
+     + paper palette via picture/prefers-color-scheme. -->
 
 <p align="center">
   <a href="https://git.io/streak-stats">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=tonyyunyang&hide_border=true&background=14110D&stroke=2F261C&ring=5BC795&fire=5BC795&currStreakLabel=5BC795&currStreakNum=EFE4CE&sideLabels=EFE4CE&sideNums=EFE4CE&dates=9C8F77">
       <img alt="GitHub streak" height="170" src="https://streak-stats.demolab.com?user=tonyyunyang&hide_border=true&background=F5EFE2&stroke=D9D2C2&ring=0E5347&fire=0E5347&currStreakLabel=0E5347&currStreakNum=0F1417&sideLabels=0F1417&sideNums=0F1417&dates=4A5159">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=tonyyunyang&theme=monokai&no-frame=true&row=1&column=7&margin-w=10&margin-h=8&title=Followers,Repositories,Stars,Commits,Issues,PullRequest,Reviews">
+      <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=tonyyunyang&theme=flat&no-frame=true&row=1&column=7&margin-w=10&margin-h=8&title=Followers,Repositories,Stars,Commits,Issues,PullRequest,Reviews">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=tonyyunyang&bg_color=14110D&color=EFE4CE&line=5BC795&point=5BC795&area=true&area_color=5BC795&hide_border=true&custom_title=Contribution%20activity%20·%20last%2030%20days">
+      <img alt="Contribution activity, last 30 days" src="https://github-readme-activity-graph.vercel.app/graph?username=tonyyunyang&bg_color=F5EFE2&color=0F1417&line=0E5347&point=0F1417&area=true&area_color=0E5347&hide_border=true&custom_title=Contribution%20activity%20·%20last%2030%20days">
     </picture>
   </a>
 </p>
