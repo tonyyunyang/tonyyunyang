@@ -317,8 +317,8 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=tonyyunyang&theme=monokai&no-frame=true&row=1&column=7&margin-w=10&margin-h=8&title=Followers,Repositories,Stars,Commits,Issues,PullRequest,Reviews">
-      <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=tonyyunyang&theme=flat&no-frame=true&row=1&column=7&margin-w=10&margin-h=8&title=Followers,Repositories,Stars,Commits,Issues,PullRequest,Reviews">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=5BC795&text_color=EFE4CE&bg_color=14110D&secondary_text_color=9C8F77&title=Followers,Repositories,Stars,Commits,Issues,PullRequest">
+      <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=0E5347&text_color=0F1417&bg_color=F5EFE2&secondary_text_color=4A5159&title=Followers,Repositories,Stars,Commits,Issues,PullRequest">
     </picture>
   </a>
 </p>
