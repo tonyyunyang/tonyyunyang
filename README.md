@@ -314,24 +314,17 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
   </a>
 </p>
 
-<!-- IMPORTANT: srcset treats commas as image-candidate separators, so any
-     URL with commas (like title=Followers,Repositories,...) gets truncated
-     to the first item ("Followers"). Encode commas as %2C in srcset URLs.
-     The img src below uses raw commas because src is parsed as a single URL. -->
-<p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=5BC795&text_color=EFE4CE&bg_color=14110D&secondary_text_color=9C8F77&title=Followers%2CRepositories%2CStars%2CCommits%2CIssues%2CPullRequest">
-      <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=tonyyunyang&no-frame=true&row=1&column=6&margin-w=12&margin-h=8&title_color=0E5347&text_color=0F1417&bg_color=F5EFE2&secondary_text_color=4A5159&title=Followers,Repositories,Stars,Commits,Issues,PullRequest">
-    </picture>
-  </a>
-</p>
+<!-- Trophies were tried (github-profile-trophy) but every theme they
+     ship hardcodes its own card-bg outside the editorial palette
+     (gray cards on cocoa, navy cards on cocoa, etc). Skipping in
+     favor of two visualizations that respect the palette: an
+     activity area-graph (next) and the snake (below). -->
 
 <p align="center">
   <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=tonyyunyang&bg_color=14110D&color=EFE4CE&line=5BC795&point=5BC795&area=true&area_color=5BC795&hide_border=true&custom_title=Contribution%20activity%20·%20last%2030%20days">
-      <img alt="Contribution activity, last 30 days" src="https://github-readme-activity-graph.vercel.app/graph?username=tonyyunyang&bg_color=F5EFE2&color=0F1417&line=0E5347&point=0F1417&area=true&area_color=0E5347&hide_border=true&custom_title=Contribution%20activity%20·%20last%2030%20days">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=tonyyunyang&bg_color=14110D&color=EFE4CE&line=5BC795&point=5BC795&area=true&area_color=5BC795&hide_border=true&custom_title=Contribution%20activity%20%C2%B7%20last%2030%20days">
+      <img alt="Contribution activity, last 30 days" src="https://github-readme-activity-graph.vercel.app/graph?username=tonyyunyang&bg_color=F5EFE2&color=0F1417&line=0E5347&point=0F1417&area=true&area_color=0E5347&hide_border=true&custom_title=Contribution%20activity%20%C2%B7%20last%2030%20days">
     </picture>
   </a>
 </p>
