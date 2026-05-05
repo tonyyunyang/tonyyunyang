@@ -68,13 +68,13 @@ The throughline I care about: useful, durable AI, especially where access and re
 </td>
 <td valign="top" width="38%" align="right">
 
-<a href="https://tonyyunyang.github.io/#contact"><img alt="Open to research · academia or industry →" src="https://img.shields.io/badge/Open_to_research-academia_or_industry_%E2%86%92-0E5347?style=for-the-badge&labelColor=F5EFE2&logoColor=0E5347"></a>
+<a href="https://tonyyunyang.github.io/#contact"><img alt="Open to research · academia or industry →" src="https://img.shields.io/badge/Open_to_research-academia_or_industry_%E2%86%92-0E5347?style=flat-square&labelColor=EDE6D5&logoColor=0E5347"></a>
 
 <sub><i>Reach out for collaborations, PhD opportunities, or research roles in academia or industry.</i></sub>
 
 <br><br>
 
-<sub>📍 <b>Amsterdam</b> &nbsp;·&nbsp; previously Shanghai · Shenzhen · Madrid · Delft</sub>
+<sub><b>Amsterdam</b> &nbsp;·&nbsp; previously Shanghai · Shenzhen · Madrid · Delft</sub>
 
 </td>
 </tr>
@@ -102,13 +102,13 @@ The throughline I care about: useful, durable AI, especially where access and re
 
 A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-frame-rate periocular video (120 fps) + 240 Hz gaze across 26 participants and Ekman's seven basic emotions.
 
-> _First dataset with high-frame-rate periocular videos. 4× higher gaze frequency than prior work. Open Unity collection + Label Studio annotation tools._
+<sub><i>First dataset with high-frame-rate periocular videos. 4× higher gaze frequency than prior work. Open Unity collection + Label Studio annotation tools.</i></sub>
 
 <sub>**Tongyun Yang**†, Bishwas Regmi†, Lingyu Du, Andreas Bulling, Xucong Zhang, Guohao Lan</sub>
 
-<a href="https://dl.acm.org/doi/10.1145/3749545"><img alt="paper" src="https://img.shields.io/badge/Paper-IMWUT_2025-0E5347?style=flat-square&labelColor=14110D"></a>
-<a href="https://github.com/tonyyunyang/Through-the-Eyes-of-Emotion"><img alt="code" src="https://img.shields.io/badge/Code-GitHub-0F1417?style=flat-square&labelColor=14110D&logo=github&logoColor=F5EFE2"></a>
-<a href="https://zenodo.org/records/16790658"><img alt="dataset" src="https://img.shields.io/badge/Dataset-Zenodo-0E5347?style=flat-square&labelColor=14110D&logo=zenodo&logoColor=F5EFE2"></a>
+<a href="https://dl.acm.org/doi/10.1145/3749545"><img alt="paper" src="https://img.shields.io/badge/Paper-IMWUT_2025-0E5347?style=flat-square&labelColor=EDE6D5"></a>
+<a href="https://github.com/tonyyunyang/Through-the-Eyes-of-Emotion"><img alt="code" src="https://img.shields.io/badge/Code-GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a>
+<a href="https://zenodo.org/records/16790658"><img alt="dataset" src="https://img.shields.io/badge/Dataset-Zenodo-0E5347?style=flat-square&labelColor=EDE6D5&logo=zenodo&logoColor=0E5347"></a>
 
 </td>
 <td valign="top" width="50%">
@@ -117,12 +117,12 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 
 **Over 80% of weights** in trained nnU-Net models can be removed via simple magnitude-based pruning, while keeping a proxy Dice score above 0.95 across multiple medical segmentation tasks.
 
-> _Validated on 4 medical datasets, 2D & 3D. Critical weights cluster near encoder/decoder ends; bottlenecks are heavily prunable._
+<sub><i>Validated on 4 medical datasets, 2D & 3D. Critical weights cluster near encoder/decoder ends; bottlenecks are heavily prunable.</i></sub>
 
 <sub>**Tongyun Yang**, Yidong Zhao, Qian Tao</sub>
 
-<a href="https://openreview.net/forum?id=uTTOhthEDR"><img alt="paper" src="https://img.shields.io/badge/Paper-MIDL_2025-0E5347?style=flat-square&labelColor=14110D"></a>
-<a href="https://github.com/tonyyunyang/pruning_nnunet"><img alt="code" src="https://img.shields.io/badge/Code-GitHub-0F1417?style=flat-square&labelColor=14110D&logo=github&logoColor=F5EFE2"></a>
+<a href="https://openreview.net/forum?id=uTTOhthEDR"><img alt="paper" src="https://img.shields.io/badge/Paper-MIDL_2025-0E5347?style=flat-square&labelColor=EDE6D5"></a>
+<a href="https://github.com/tonyyunyang/pruning_nnunet"><img alt="code" src="https://img.shields.io/badge/Code-GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a>
 
 </td>
 </tr>
@@ -206,35 +206,35 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 <tr>
 <td valign="top" width="33%">
 
-### <a href="https://github.com/tonyyunyang/tonyyunyang.github.io">tonyyunyang.github.io</a>
+### tonyyunyang.github.io
 
 <sub><code>Astro</code> · <code>Tailwind v4</code> · <code>TypeScript</code></sub>
 
 Hand-built personal site, single-author, no template ancestry. Atelier × Cinema design language with Pagefind search and a hand-drawn Studio scene.
 
-<sub><a href="https://tonyyunyang.github.io/">Live →</a></sub>
+<a href="https://github.com/tonyyunyang/tonyyunyang.github.io"><img alt="Open the repo" src="https://img.shields.io/badge/Repo-on_GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a> <a href="https://tonyyunyang.github.io/"><img alt="Open the live site" src="https://img.shields.io/badge/Live-tonyyunyang.github.io-0E5347?style=flat-square&labelColor=EDE6D5&logo=safari&logoColor=0E5347"></a>
 
 </td>
 <td valign="top" width="33%">
 
-### <a href="https://github.com/tonyyunyang/Scholar-High-Lights">Scholar High Lights</a>
+### Scholar High Lights
 
 <sub><code>JavaScript</code> · <code>Chrome ext</code></sub>
 
 Highlighting + organizing research papers on Google Scholar. Colored notes that persist across sessions, exportable for your own zettelkasten.
 
-<sub><a href="https://github.com/tonyyunyang/Scholar-High-Lights">Repo →</a></sub>
+<a href="https://github.com/tonyyunyang/Scholar-High-Lights"><img alt="Open the repo" src="https://img.shields.io/badge/Repo-on_GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a>
 
 </td>
 <td valign="top" width="33%">
 
-### <a href="https://github.com/tonyyunyang/pruning_nnunet">pruning_nnunet</a>
+### pruning_nnunet
 
 <sub><code>Python</code> · <code>PyTorch</code> · <code>MIDL '25</code></sub>
 
 Reference implementation for our MIDL '25 paper on pruning trained nnU-Net models. Magnitude-based, 80%+ reduction, 2D & 3D.
 
-<sub><a href="https://openreview.net/forum?id=uTTOhthEDR">Paper →</a></sub>
+<a href="https://github.com/tonyyunyang/pruning_nnunet"><img alt="Open the repo" src="https://img.shields.io/badge/Repo-on_GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a> <a href="https://openreview.net/forum?id=uTTOhthEDR"><img alt="Read the MIDL '25 paper" src="https://img.shields.io/badge/Paper-MIDL_2025-0E5347?style=flat-square&labelColor=EDE6D5"></a>
 
 </td>
 </tr>
