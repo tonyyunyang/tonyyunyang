@@ -149,8 +149,7 @@
   <path d="M60 64 H820" stroke="#2F261C" stroke-width="0.7"/>
 
   <g>
-    <text x="60" y="100" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="22" fill="#5BC795">daily</text>
-    <text x="60" y="118" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.24em" fill="#9C8F77">EVERY MORNING · EVERY EVENING</text>
+    <text x="60" y="124" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="26" fill="#5BC795">daily</text>
     <rect x="220" y="84" width="612" height="64" fill="url(#stk-hatch-shelf-d)" opacity="0.7"/>
     <path d="M220 84 H832" stroke="#5BC795" stroke-width="0.5" opacity="0.5"/>
     <path d="M220 148 H832" stroke="#5BC795" stroke-width="0.5" opacity="0.5"/>
@@ -170,8 +169,7 @@
   </g>
 
   <g>
-    <text x="60" y="218" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="20" fill="#EFE4CE">often</text>
-    <text x="60" y="236" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.24em" fill="#9C8F77">SEVERAL TIMES A WEEK</text>
+    <text x="60" y="240" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="24" fill="#EFE4CE">often</text>
     <rect x="220" y="202" width="612" height="60" fill="url(#stk-hatch-shelf-d)" opacity="0.5"/>
     <path d="M220 202 H832" stroke="#EFE4CE" stroke-width="0.5" opacity="0.4"/>
     <path d="M220 262 H832" stroke="#EFE4CE" stroke-width="0.5" opacity="0.4"/>
@@ -193,8 +191,7 @@
   </g>
 
   <g>
-    <text x="60" y="326" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="20" fill="#9C8F77">on the shelf</text>
-    <text x="60" y="344" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.24em" fill="#9C8F77">FOR WHEN A PROJECT CALLS</text>
+    <text x="60" y="348" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="24" fill="#9C8F77">on the shelf</text>
     <rect x="220" y="310" width="612" height="60" fill="url(#stk-hatch-shelf-d)" opacity="0.4"/>
     <path d="M220 310 H832" stroke="#9C8F77" stroke-width="0.5" opacity="0.4"/>
     <path d="M220 370 H832" stroke="#9C8F77" stroke-width="0.5" opacity="0.4"/>
