@@ -21,164 +21,216 @@
     ]]></style>
 
     <!-- ================== ICON SYMBOLS ==================
-         Each icon sits in a 40x40 viewport, centred. Single-line
-         hand drawn feel: stroke 1.2, round caps, ink colour by default
-         (use currentColor so we can tint per tier). -->
+         Each icon sits in a 40x40 viewport. Drawing area uses ~5 to ~35
+         so icons read at the rendered 44 px size. Strokes 1.4-1.8 for
+         body. currentColor lets each tier tint the whole set. -->
 
     <symbol id="ico-python" viewBox="0 0 40 40">
-      <!-- Two interlocking serpent-droplets, the Python double-snake mark.
-           Top drop curls left, bottom drop curls right. Eye dots indicate
-           heads. Filled rounded shapes make the pair recognisable at
-           small sizes. -->
-      <g stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
-        <path d="M16 6 Q9 6 9 13 V18 H22 Q24 18 24 20 V22 H14 Q11 22 11 24" fill="none"/>
-        <circle cx="12.5" cy="9.5" r="1" fill="currentColor" stroke="none"/>
-        <path d="M24 34 Q31 34 31 27 V22 H18 Q16 22 16 20 V18 H26 Q29 18 29 16" fill="none" opacity="0.78"/>
-        <circle cx="27.5" cy="30.5" r="1" fill="currentColor" stroke="none" opacity="0.78"/>
+      <!-- Python: two interlocking rounded blocks, one stamped on top
+           of the other in the iconic L-rotated geometry. Each piece has
+           a small circular eye marking the snake head. -->
+      <g stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+        <!-- Lower piece drawn first so the upper covers part of it -->
+        <path d="M14 38 H26 Q30 38 30 34 V22 H21 Q19 22 19 20 V14 H10 V34 Q10 38 14 38 Z"
+              fill="currentColor" fill-opacity="0.45"/>
+        <circle cx="26" cy="32" r="1.3" fill="currentColor" stroke="none"/>
+        <!-- Upper piece -->
+        <path d="M26 2 H14 Q10 2 10 6 V18 H19 Q21 18 21 20 V26 H30 V6 Q30 2 26 2 Z"
+              fill="currentColor" fill-opacity="0.18"/>
+        <circle cx="14" cy="8" r="1.3" fill="currentColor" stroke="none"/>
       </g>
     </symbol>
 
     <symbol id="ico-pytorch" viewBox="0 0 40 40">
-      <!-- A flame with a sharp tip and a curl at the base, plus the
-           characteristic notched "torch" gap on top. Dot for the spark. -->
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 5 L17 10 Q11 16 11 23 Q11 31 20 34 Q29 31 29 23 Q29 16 24 12 L20 5 Z"/>
-        <circle cx="20" cy="22" r="1.8" fill="currentColor" stroke="none"/>
+      <!-- PyTorch: a flame silhouette with a clear V-notch at the top
+           (the recognisable PyTorch logo gap), and an inner solid dot
+           marking the spark. Body curve is teardrop. -->
+      <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 4 L17 9 L20 12 L23 9 L20 4 Z M20 12 Q11 17 11 24 Q11 32 20 35 Q29 32 29 24 Q29 18 25 14 L20 12"
+              fill="none"/>
+        <circle cx="20" cy="22" r="2.2" fill="currentColor" stroke="none"/>
       </g>
     </symbol>
 
     <symbol id="ico-cuda" viewBox="0 0 40 40">
-      <!-- A microchip: square with corner notch and pin ticks -->
-      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 12 H26 L30 16 V30 H14 L10 26 Z"/>
-        <path d="M14 18 H26 M14 22 H26 M14 26 H26" opacity="0.7"/>
-        <!-- Pins -->
-        <path d="M10 16 H7 M10 20 H7 M10 24 H7 M30 18 H33 M30 22 H33 M30 26 H33 M14 30 V33 M18 30 V33 M22 30 V33 M14 12 V9 M18 12 V9 M22 12 V9" opacity="0.7"/>
+      <!-- CUDA: a microchip with corner notch (a chip's pin-1 marker),
+           an inner die grid, and pin ticks on all four sides. -->
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 11 H27 L31 15 V30 H14 L10 26 Z"/>
+        <rect x="14" y="15" width="13" height="11" fill="currentColor" fill-opacity="0.12" stroke="none"/>
+        <line x1="14" y1="18" x2="27" y2="18" opacity="0.6"/>
+        <line x1="14" y1="22" x2="27" y2="22" opacity="0.6"/>
+        <line x1="18" y1="15" x2="18" y2="26" opacity="0.6"/>
+        <line x1="22" y1="15" x2="22" y2="26" opacity="0.6"/>
+        <g opacity="0.85" stroke-width="1">
+          <line x1="14" y1="11" x2="14" y2="8"/>
+          <line x1="18" y1="11" x2="18" y2="8"/>
+          <line x1="22" y1="11" x2="22" y2="8"/>
+          <line x1="26" y1="11" x2="26" y2="8"/>
+          <line x1="14" y1="30" x2="14" y2="33"/>
+          <line x1="18" y1="30" x2="18" y2="33"/>
+          <line x1="22" y1="30" x2="22" y2="33"/>
+          <line x1="26" y1="30" x2="26" y2="33"/>
+          <line x1="10" y1="14" x2="7" y2="14"/>
+          <line x1="10" y1="18" x2="7" y2="18"/>
+          <line x1="10" y1="22" x2="7" y2="22"/>
+          <line x1="31" y1="18" x2="34" y2="18"/>
+          <line x1="31" y1="22" x2="34" y2="22"/>
+          <line x1="31" y1="26" x2="34" y2="26"/>
+        </g>
       </g>
     </symbol>
 
     <symbol id="ico-latex" viewBox="0 0 40 40">
-      <!-- A typeset page: serif L with a tiny ornament + ruled lines -->
-      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 9 H31 V31 H9 Z" opacity="0.5"/>
-        <text x="13" y="24" font-family="EB Garamond, Garamond, Georgia, serif" font-size="14" font-weight="500" fill="currentColor" stroke="none">L</text>
-        <text x="20" y="28" font-family="EB Garamond, Garamond, Georgia, serif" font-style="italic" font-size="9" fill="currentColor" stroke="none">a</text>
-        <text x="24" y="22" font-family="EB Garamond, Garamond, Georgia, serif" font-size="11" fill="currentColor" stroke="none">T</text>
-        <text x="29" y="26" font-family="EB Garamond, Garamond, Georgia, serif" font-size="10" fill="currentColor" stroke="none">X</text>
+      <!-- LaTeX: the actual wordmark with raised A, lowered E. Letters
+           positioned with proper kerning so they never collide. -->
+      <g font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" fill="currentColor" stroke="none">
+        <text x="3" y="28" font-size="16" font-weight="500">L</text>
+        <text x="9" y="20" font-size="9" font-weight="500">A</text>
+        <text x="14" y="28" font-size="16">T</text>
+        <text x="22" y="32" font-size="9">E</text>
+        <text x="28" y="28" font-size="16">X</text>
       </g>
+      <line x1="6" y1="33" x2="34" y2="33" stroke="currentColor" stroke-width="0.7" opacity="0.45"/>
     </symbol>
 
     <symbol id="ico-tensorflow" viewBox="0 0 40 40">
-      <!-- A blocky T mark, the bar on top and a stem below. -->
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="9" y="9" width="22" height="6"/>
-        <rect x="17" y="15" width="6" height="17"/>
-        <line x1="13" y1="12" x2="27" y2="12" opacity="0.55"/>
-        <line x1="20" y1="20" x2="20" y2="28" opacity="0.55"/>
+      <!-- TensorFlow: angled blocks forming a T with subtle 3D depth.
+           Top horizontal slab plus vertical stem. -->
+      <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 8 L28 8 L31 12 L11 12 Z" fill="currentColor" fill-opacity="0.18"/>
+        <path d="M16 12 L24 12 L24 33 L20 33 L20 16 L16 16 Z" fill="currentColor" fill-opacity="0.34"/>
+        <path d="M16 12 V16 H20 V33" opacity="0.7" fill="none"/>
+        <path d="M28 8 L31 12 L31 14" opacity="0.55" fill="none"/>
       </g>
     </symbol>
 
     <symbol id="ico-unity" viewBox="0 0 40 40">
-      <!-- Isometric cube wireframe -->
-      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 8 L31 14 V26 L20 32 L9 26 V14 Z"/>
-        <path d="M20 8 V20 L31 14 M20 20 L9 14 M20 20 V32" opacity="0.7"/>
-        <circle cx="20" cy="20" r="1.2" fill="currentColor" stroke="none"/>
+      <!-- Unity: isometric cube with three visible faces and a small
+           triangular Y-section inside (Unity's signature negative-space
+           Y at the cube's centre). -->
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 5 L33 12 V27 L20 35 L7 27 V12 Z"/>
+        <path d="M20 5 V20 L33 12 M20 20 L7 12 M20 20 V35" stroke-width="1" opacity="0.7"/>
+        <path d="M20 12 L25 16 L20 23 L15 16 Z" stroke-width="1" fill="currentColor" fill-opacity="0.18"/>
+        <circle cx="20" cy="18" r="1.2" fill="currentColor" stroke="none"/>
       </g>
     </symbol>
 
     <symbol id="ico-typescript" viewBox="0 0 40 40">
-      <!-- Angle brackets framing a thin line -->
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M13 14 L7 20 L13 26"/>
-        <path d="M27 14 L33 20 L27 26"/>
-        <path d="M16 28 L24 12" opacity="0.7"/>
+      <!-- TypeScript: filled corner-rounded square containing the bold
+           "TS" letterform. Closer to the real brand mark. -->
+      <g stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+        <rect x="6" y="6" width="28" height="28" rx="3" fill="currentColor" fill-opacity="0.16"/>
+        <path d="M11 16 H22 M16.5 16 V28" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+        <path d="M30 19 Q26 19 26 22 Q26 25 28.5 25 Q31 25 31 28 Q31 31 26.5 31" stroke-width="1.5" stroke-linecap="round" fill="none"/>
       </g>
     </symbol>
 
     <symbol id="ico-cpp" viewBox="0 0 40 40">
-      <!-- An open C with two bold plus signs to its right -->
-      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11 Q9 11 9 20 Q9 29 21 29" stroke-width="1.4"/>
-        <path d="M25 16 V24 M21 20 H29" stroke-width="1.6"/>
-        <path d="M33 16 V24 M29 20 H37" stroke-width="1.6"/>
+      <!-- C++: a substantial C arc with two bold plus signs. Stroke
+           weights are tuned so the pluses read as solid marks. -->
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 9 Q7 9 7 20 Q7 31 21 31" stroke-width="2"/>
+        <line x1="25" y1="15" x2="25" y2="25" stroke-width="2"/>
+        <line x1="20" y1="20" x2="30" y2="20" stroke-width="2"/>
+        <line x1="34" y1="15" x2="34" y2="25" stroke-width="2"/>
+        <line x1="29" y1="20" x2="39" y2="20" stroke-width="2"/>
       </g>
     </symbol>
 
     <symbol id="ico-linux" viewBox="0 0 40 40">
-      <!-- A clean Tux silhouette: round head with beak, body egg, feet. -->
-      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <!-- head -->
-        <path d="M14 13 Q14 7 20 7 Q26 7 26 13 Q26 16 24 18"/>
-        <!-- body (rounded egg) -->
-        <path d="M12 28 Q12 18 20 16 Q28 18 28 28 Q28 32 25 33 H15 Q12 32 12 28 Z" fill="currentColor" fill-opacity="0.06"/>
-        <!-- white belly -->
-        <path d="M16 28 Q16 22 20 22 Q24 22 24 28 Q24 31 22 32 H18 Q16 31 16 28 Z" opacity="0.45"/>
-        <!-- eyes -->
-        <circle cx="18" cy="12" r="0.7" fill="currentColor" stroke="none"/>
-        <circle cx="22" cy="12" r="0.7" fill="currentColor" stroke="none"/>
-        <!-- beak (yellow, here as accent fill) -->
-        <path d="M18 14.5 L20 16.5 L22 14.5 L20 13.5 Z" fill="currentColor" fill-opacity="0.6" stroke="none"/>
-        <!-- feet -->
-        <path d="M16 33 L13 36 M24 33 L27 36"/>
+      <!-- Linux: a clearer Tux. Body and head are one continuous
+           pear silhouette so they don't read as overlapping circles.
+           White belly is an interior shape. Beak and feet are filled. -->
+      <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3">
+        <!-- Continuous body silhouette: head → shoulders → bottom -->
+        <path d="M20 4 Q14 4 14 10 V12 Q11 13 11 18 Q11 24 11 28 Q11 33 14 35 H26 Q29 33 29 28 Q29 24 29 18 Q29 13 26 12 V10 Q26 4 20 4 Z"
+              fill="currentColor" fill-opacity="0.18"/>
+        <!-- White belly oval -->
+        <path d="M16 28 Q16 22 20 22 Q24 22 24 28 Q24 33 22 34 H18 Q16 33 16 28 Z"
+              fill="currentColor" fill-opacity="0" opacity="0.55"/>
+        <!-- Eyes -->
+        <ellipse cx="17.5" cy="9.5" rx="1" ry="1.4" fill="currentColor" stroke="none"/>
+        <ellipse cx="22.5" cy="9.5" rx="1" ry="1.4" fill="currentColor" stroke="none"/>
+        <!-- Beak triangle -->
+        <path d="M17.5 12.5 L20 14.5 L22.5 12.5 L20 11.5 Z" fill="currentColor" fill-opacity="0.65" stroke-width="0.8"/>
+        <!-- Feet -->
+        <path d="M16 35 L13 38 H17 Z" fill="currentColor" fill-opacity="0.55" stroke-width="0.8"/>
+        <path d="M24 35 L27 38 H23 Z" fill="currentColor" fill-opacity="0.55" stroke-width="0.8"/>
       </g>
     </symbol>
 
     <symbol id="ico-react" viewBox="0 0 40 40">
-      <!-- Three orbital ellipses with a center dot -->
-      <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
-        <ellipse cx="20" cy="20" rx="11" ry="4"/>
-        <ellipse cx="20" cy="20" rx="11" ry="4" transform="rotate(60 20 20)"/>
-        <ellipse cx="20" cy="20" rx="11" ry="4" transform="rotate(120 20 20)"/>
+      <!-- React: three crossed orbital ellipses with a strong nucleus.
+           Slight stroke-weight variance so the orbits read individually. -->
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2">
+        <ellipse cx="20" cy="20" rx="13" ry="5"/>
+        <ellipse cx="20" cy="20" rx="13" ry="5" transform="rotate(60 20 20)"/>
+        <ellipse cx="20" cy="20" rx="13" ry="5" transform="rotate(120 20 20)"/>
       </g>
-      <circle cx="20" cy="20" r="1.8" fill="currentColor"/>
+      <circle cx="20" cy="20" r="2.4" fill="currentColor"/>
     </symbol>
 
     <symbol id="ico-node" viewBox="0 0 40 40">
-      <!-- Hexagon with a small node mark inside -->
-      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 8 L31 14 V26 L20 32 L9 26 V14 Z"/>
-        <text x="20" y="24" text-anchor="middle" font-family="JetBrains Mono, Menlo, monospace" font-size="9" font-weight="500" fill="currentColor" stroke="none">N</text>
+      <!-- Node.js: hexagon with a tilted N inside. Filled at low alpha
+           so the silhouette reads as a solid badge. -->
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M20 4 L33 11 V25 Q33 27 31.5 28 L21 34 Q20 34.5 19 34 L8.5 28 Q7 27 7 25 V11 Z"
+              fill="currentColor" fill-opacity="0.10"/>
       </g>
+      <text x="20" y="25" text-anchor="middle" font-family="EB Garamond, Garamond, Georgia, serif" font-style="italic" font-size="14" font-weight="500" fill="currentColor">N</text>
     </symbol>
 
     <symbol id="ico-docker" viewBox="0 0 40 40">
-      <!-- A whale carrying stacked containers, simplified: two rows of
-           square cells (the containers) sitting on a curved whale back. -->
-      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <!-- container row 1 (3 cells) -->
-        <rect x="9" y="17" width="5" height="5"/>
-        <rect x="15" y="17" width="5" height="5"/>
-        <rect x="21" y="17" width="5" height="5"/>
-        <!-- container row 2 (2 cells, offset) -->
-        <rect x="12" y="11" width="5" height="5"/>
-        <rect x="18" y="11" width="5" height="5"/>
-        <!-- whale spout -->
-        <path d="M30 14 Q31 11 33 13" opacity="0.7"/>
-        <!-- whale body curve -->
-        <path d="M6 24 Q6 28 12 30 H28 Q34 30 36 26 L33 24 Q31 23 29 25" stroke-width="1.3"/>
-        <!-- tail flick -->
-        <path d="M5 22 Q3 23 4 26" opacity="0.7"/>
+      <!-- Docker: a clearer whale with a stacked container ship. The
+           container blocks sit on the whale's back, with a spout and a
+           tail. Whale body is filled at low alpha for presence. -->
+      <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" fill="none">
+        <!-- Container blocks (3 + 2 stacked) -->
+        <rect x="8" y="17" width="5" height="5" fill="currentColor" fill-opacity="0.18"/>
+        <rect x="14" y="17" width="5" height="5" fill="currentColor" fill-opacity="0.18"/>
+        <rect x="20" y="17" width="5" height="5" fill="currentColor" fill-opacity="0.18"/>
+        <rect x="11" y="11" width="5" height="5" fill="currentColor" fill-opacity="0.18"/>
+        <rect x="17" y="11" width="5" height="5" fill="currentColor" fill-opacity="0.18"/>
+        <!-- Whale spout (3 small dots) -->
+        <path d="M28 13 Q29 10 31 11 Q32 12 31 13" stroke-width="1" opacity="0.7"/>
+        <!-- Whale body (curved hull) -->
+        <path d="M5 23 Q4 30 11 31 H27 Q34 31 36 26 L33 24 Q31 24 30 26"
+              fill="currentColor" fill-opacity="0.10" stroke-width="1.4"/>
+        <!-- Whale eye -->
+        <circle cx="32" cy="27" r="0.6" fill="currentColor" stroke="none"/>
+        <!-- Tail flick -->
+        <path d="M5 23 Q1 22 1 26 Q3 25 5 26" stroke-width="1" opacity="0.7"/>
       </g>
     </symbol>
 
     <symbol id="ico-c" viewBox="0 0 40 40">
-      <!-- A simple letter C in a circle -->
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="20" cy="20" r="11" opacity="0.5"/>
-        <path d="M25 14 Q15 14 15 20 Q15 26 25 26"/>
+      <!-- C: a bold serif-styled C inside a soft circular badge ring -->
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="20" cy="20" r="13" opacity="0.4" stroke-width="1.2"/>
+        <path d="M27 12 Q11 12 11 20 Q11 28 27 28" stroke-width="2"/>
+        <!-- tiny serifs at the C ends -->
+        <path d="M25 12 V14 M25 28 V26" stroke-width="1.2" opacity="0.8"/>
       </g>
     </symbol>
 
     <symbol id="ico-git" viewBox="0 0 40 40">
-      <!-- A simple Y-fork. Three nodes, branches diverging upward. -->
-      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 30 V20"/>
-        <path d="M20 20 L12 10"/>
-        <path d="M20 20 L28 10"/>
-        <circle cx="20" cy="32" r="2.2" fill="currentColor"/>
-        <circle cx="12" cy="9" r="2.2" fill="currentColor"/>
-        <circle cx="28" cy="9" r="2.2" fill="currentColor"/>
+      <!-- Git: a branching graph with three nodes and connecting lines
+           plus a small merge dot at the bottom node centre. -->
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 33 V21"/>
+        <path d="M20 21 L11 9"/>
+        <path d="M20 21 L29 9"/>
+      </g>
+      <g fill="currentColor">
+        <circle cx="20" cy="34" r="2.6"/>
+        <circle cx="11" cy="8" r="2.6"/>
+        <circle cx="29" cy="8" r="2.6"/>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.55" stroke-linecap="round">
+        <path d="M11 11 V14 L13 16"/>
+        <path d="M29 11 V14 L27 16"/>
       </g>
     </symbol>
   </defs>
