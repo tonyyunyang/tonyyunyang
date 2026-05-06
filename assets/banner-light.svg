@@ -62,7 +62,7 @@
   <rect x="1240" y="254" width="14" height="80" fill="url(#hatch)" opacity="0.6"/>
 
   <!-- Plate labels: top-left & top-right corners (mono caps) -->
-  <text x="60" y="56" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="#4A5159">§ PLATE GH · OPEN SOURCE</text>
+  <text x="60" y="56" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="#4A5159">§ PLATE GH · STUDIO</text>
   <text x="1220" y="56" text-anchor="end" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="#4A5159">AMSTERDAM · 2026</text>
 
   <!-- Plate labels: bottom -->

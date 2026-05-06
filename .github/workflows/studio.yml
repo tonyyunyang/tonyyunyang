@@ -1,15 +1,16 @@
 name: studio · regenerate visual artifacts
 
-# Generates BOTH the contribution snake (Platane/snk) and the
-# Workshop Ledger plate (scripts/build-ledger.mjs) in a single
-# workflow run, then publishes them together to the `output` branch.
-# Two separate workflows would race each other on the output branch
-# and the second-to-finish would wipe the first's artifacts.
+# Generates the Workshop Ledger plate (scripts/build-ledger.mjs) and
+# publishes it to the `output` branch. The ledger plate carries figures,
+# a 30-day sparkline, and a full year grid in one composition. The
+# previous Platane/snk contribution-snake step was removed: the snake
+# rendered with low-contrast empty cells against the paper palette and
+# duplicated information already on the ledger.
 
 on:
   schedule:
     # Twice daily at 06:13 and 18:13 UTC. Stats change as Tony
-    # commits; nightly is too slow if the ledger should feel current.
+    # commits, and nightly is too slow if the ledger should feel current.
     - cron: "13 6,18 * * *"
   workflow_dispatch:
   push:
@@ -31,31 +32,12 @@ jobs:
         with:
           node-version: "20"
 
-      # ----- 1. SNAKE -----
-      # Render light + dark + a default in one pass. The palette uses
-      # exact Atelier × Cinema design tokens (no off-token interpolated
-      # greens), so the contribution grid feels like an extension of the
-      # rest of the README, not a separate widget. Five colors per ramp:
-      # surface, hairline, ink-soft, accent, ink · light-to-dark
-      # intensity for the four contribution bands, with the snake using
-      # the accent.
-      - name: generate snake SVGs
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-snake.svg?palette=github-light&color_snake=%230E5347&color_dots=%23EDE6D5,%23D9D2C2,%234A5159,%230E5347,%230F1417
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=%235BC795&color_dots=%231D1812,%232F261C,%239C8F77,%235BC795,%23EFE4CE
-
-      # ----- 2. LEDGER -----
       - name: render workshop ledger SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
         run: node scripts/build-ledger.mjs
 
-      # ----- 3. PUBLISH -----
       - name: push artifacts to the `output` branch
         uses: crazy-max/ghaction-github-pages@v4
         with:

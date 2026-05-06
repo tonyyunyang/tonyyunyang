@@ -1,6 +1,6 @@
 <!--
   ┌──────────────────────────────────────────────────────────────────────┐
-  │  PLATE GH · OPEN SOURCE                            AMSTERDAM · 2026  │
+  │  PLATE GH · STUDIO                                  AMSTERDAM · 2026 │
   │                                                                      │
   │     Tony Yang  杨童耘                                                 │
   │     INDEPENDENT AI RESEARCHER · AMSTERDAM                            │
@@ -27,9 +27,6 @@
 
 <!-- ============================================================
      QUICK LINKS · light, editorial flat-square pills
-     The banner already carries the tagline. The pills sit just below
-     it as a quiet directory, not a second hero. paper-shade label +
-     emerald body keeps them in the same key as the plate.
      ============================================================ -->
 
 <p align="center">
@@ -40,7 +37,6 @@
   <a href="https://tonyyunyang.github.io/cv-zh.pdf"><img alt="CV 中文" src="https://img.shields.io/badge/CV-%E4%B8%AD%E6%96%87-0E5347?style=flat-square&labelColor=EDE6D5&logo=readthedocs&logoColor=0E5347"></a>
 </p>
 
-<!-- A small editorial flourish to break into sections -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/ornament-dark.svg">
@@ -59,26 +55,33 @@
 <tr>
 <td valign="top" width="62%">
 
-An independent AI researcher in Amsterdam. I currently collaborate with **industry** (Tencent, Gradient Networks, MeetaVista) and **academia** (TU Delft, McGill, Tsinghua) on **cost-efficient LLMs**, **optimization-as-reasoning**, and **intent-aware world models**.
+An independent AI researcher in Amsterdam. I work with industry partners (Tencent, Gradient Networks, MeetaVista) and academic groups (TU Delft, McGill, Tsinghua). Three threads run through what I do. Cost efficient large language models. Optimization as reasoning. World models that read intent.
 
-Earlier: Marie Skłodowska-Curie Fellow at **IMDEA Networks** (Madrid), AI Research Engineer at **TU Delft Imaging Physics**, MSc in Computer & Embedded Systems Engineering at **TU Delft**.
+Before Amsterdam I was a Marie Skłodowska-Curie Fellow at IMDEA Networks in Madrid. Before that, a Research Engineer at TU Delft Imaging Physics. My MSc is from TU Delft, in Computer and Embedded Systems Engineering.
 
-The throughline I care about: useful, durable AI, especially where access and reliability matter.
+Mostly I want to build AI that is useful, that holds up, and that reaches the people who need it.
 
 </td>
 <td valign="top" width="38%" align="right">
 
 <a href="https://tonyyunyang.github.io/#contact"><img alt="Open to research · academia or industry →" src="https://img.shields.io/badge/Open_to_research-academia_or_industry_%E2%86%92-0E5347?style=flat-square&labelColor=EDE6D5&logoColor=0E5347"></a>
 
-<sub><i>Reach out for collaborations, PhD opportunities, or research roles in academia or industry.</i></sub>
-
-<br><br>
-
-<sub><b>Amsterdam</b> &nbsp;·&nbsp; previously Shanghai · Shenzhen · Madrid · Delft</sub>
+<sub><i>Open to collaborations, PhD opportunities, and research roles. Either side, academia or industry.</i></sub>
 
 </td>
 </tr>
 </table>
+
+<!-- Locator plate · single line route, current city marked. Replaces
+     the table-cell location list that used to wrap awkwardly onto two
+     lines and never made the current city obvious. -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/locator-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/locator-light.svg">
+    <img alt="Now in Amsterdam. The route in order: Shanghai, Shenzhen, Delft, Madrid, Amsterdam." src="./assets/locator-light.svg" width="100%">
+  </picture>
+</p>
 
 <p align="center">
   <picture>
@@ -100,9 +103,9 @@ The throughline I care about: useful, durable AI, especially where access and re
 
 ### Through the Eyes of Emotion <sub>· IMWUT '25</sub>
 
-A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-frame-rate periocular video (120 fps) + 240 Hz gaze across 26 participants and Ekman's seven basic emotions.
+A multifaceted eye tracking dataset for emotion recognition in VR. Periocular video at 120 fps. Gaze at 240 Hz. 26 participants across Ekman's seven basic emotions.
 
-<sub><i>First dataset with high-frame-rate periocular videos. 4× higher gaze frequency than prior work. Open Unity collection + Label Studio annotation tools.</i></sub>
+<sub><i>The first dataset with high frame rate periocular videos. Four times the gaze frequency of prior work. Open Unity collection and Label Studio annotation tools, all included.</i></sub>
 
 <sub>**Tongyun Yang**†, Bishwas Regmi†, Lingyu Du, Andreas Bulling, Xucong Zhang, Guohao Lan</sub>
 
@@ -115,9 +118,9 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 
 ### Pruning nnU-Net <sub>· MIDL '25</sub>
 
-**Over 80% of weights** in trained nnU-Net models can be removed via simple magnitude-based pruning, while keeping a proxy Dice score above 0.95 across multiple medical segmentation tasks.
+Over 80% of weights in trained nnU-Net models can be removed via simple magnitude based pruning. Proxy Dice stays above 0.95 across multiple medical segmentation tasks.
 
-<sub><i>Validated on 4 medical datasets, 2D & 3D. Critical weights cluster near encoder/decoder ends; bottlenecks are heavily prunable.</i></sub>
+<sub><i>Validated on four medical datasets, both 2D and 3D. Critical weights cluster near the encoder and decoder ends. Bottlenecks turn out to be heavily prunable.</i></sub>
 
 <sub>**Tongyun Yang**, Yidong Zhao, Qian Tao</sub>
 
@@ -143,7 +146,7 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 
 ### §01c · Research compass
 
-<sub><i>Two threads run through every paper here: pushing AI beyond text into perception and action, and making those systems fairer and more reachable in practice.</i></sub>
+<sub><i>Two threads run through every paper here. Pushing AI beyond text, into perception and action. Making those systems fairer and easier to reach in practice.</i></sub>
 
 <table>
 <tr>
@@ -182,7 +185,7 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 <td valign="top">
 
 **⌂&nbsp; Fairness × access**
-<br><sub>A motivation, not a sub-field. Anything I build should reach the people who need it most, not the people who already have everything.</sub>
+<br><sub>A motivation, not a separate field. Anything I build should reach the people who need it most, not the people who already have everything.</sub>
 
 </td>
 </tr>
@@ -197,92 +200,20 @@ A **multi-faceted eye-tracking dataset** for emotion recognition in VR. High-fra
 </p>
 
 <!-- ============================================================
-     §02 · OPEN SOURCE · featured repos as cards
+     §02 · STACK · hand-drawn workshop kit plate
+     Replaces the shields.io brand-pill grid (which read as a logo
+     parade in three sizes) with a single editorial plate showing
+     line-art icons and frequency tiers in the exact site palette.
      ============================================================ -->
 
-## §02 · Open Source
-
-<table>
-<tr>
-<td valign="top" width="33%">
-
-### tonyyunyang.github.io
-
-<sub><code>Astro</code> · <code>Tailwind v4</code> · <code>TypeScript</code></sub>
-
-Hand-built personal site, single-author, no template ancestry. Atelier × Cinema design language with Pagefind search and a hand-drawn Studio scene.
-
-<a href="https://github.com/tonyyunyang/tonyyunyang.github.io"><img alt="Open the repo" src="https://img.shields.io/badge/Repo-on_GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a> <a href="https://tonyyunyang.github.io/"><img alt="Open the live site" src="https://img.shields.io/badge/Live-tonyyunyang.github.io-0E5347?style=flat-square&labelColor=EDE6D5&logo=safari&logoColor=0E5347"></a>
-
-</td>
-<td valign="top" width="33%">
-
-### Scholar High Lights
-
-<sub><code>JavaScript</code> · <code>Chrome ext</code></sub>
-
-Highlighting + organizing research papers on Google Scholar. Colored notes that persist across sessions, exportable for your own zettelkasten.
-
-<a href="https://github.com/tonyyunyang/Scholar-High-Lights"><img alt="Open the repo" src="https://img.shields.io/badge/Repo-on_GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a>
-
-</td>
-<td valign="top" width="33%">
-
-### pruning_nnunet
-
-<sub><code>Python</code> · <code>PyTorch</code> · <code>MIDL '25</code></sub>
-
-Reference implementation for our MIDL '25 paper on pruning trained nnU-Net models. Magnitude-based, 80%+ reduction, 2D & 3D.
-
-<a href="https://github.com/tonyyunyang/pruning_nnunet"><img alt="Open the repo" src="https://img.shields.io/badge/Repo-on_GitHub-0E5347?style=flat-square&labelColor=EDE6D5&logo=github&logoColor=0E5347"></a> <a href="https://openreview.net/forum?id=uTTOhthEDR"><img alt="Read the MIDL '25 paper" src="https://img.shields.io/badge/Paper-MIDL_2025-0E5347?style=flat-square&labelColor=EDE6D5"></a>
-
-</td>
-</tr>
-</table>
+## §02 · Stack
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/ornament-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/ornament-light.svg">
-    <img alt="" src="./assets/ornament-light.svg" width="320" aria-hidden="true">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
+    <img alt="Workshop kit. Daily: Python, PyTorch, CUDA, LaTeX. Often: TensorFlow, Unity for XR, TypeScript, C++, Linux. On the shelf: React, Node.js, Docker, C, Git." src="./assets/stack-light.svg" width="100%">
   </picture>
-</p>
-
-<!-- ============================================================
-     §03 · STACK · monoline pills, no vendor color
-     The skillicons API renders saturated brand-colored squares that
-     became the loudest field on the page. Swapped for shields.io
-     flat pills that share the page palette (paper-shade label,
-     emerald body) so the stack reads as a list of tools, not a
-     parade of logos.
-     ============================================================ -->
-
-## §03 · Stack
-
-<p align="center"><i>Daily</i></p>
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/-Python-0E5347?style=flat-square&labelColor=EDE6D5&logo=python&logoColor=0E5347">
-  <img alt="PyTorch" src="https://img.shields.io/badge/-PyTorch-0E5347?style=flat-square&labelColor=EDE6D5&logo=pytorch&logoColor=0E5347">
-  <img alt="CUDA" src="https://img.shields.io/badge/-CUDA-0E5347?style=flat-square&labelColor=EDE6D5&logo=nvidia&logoColor=0E5347">
-  <img alt="LaTeX" src="https://img.shields.io/badge/-LaTeX-0E5347?style=flat-square&labelColor=EDE6D5&logo=latex&logoColor=0E5347">
-</p>
-
-<p align="center"><i>Often</i></p>
-<p align="center">
-  <img alt="TensorFlow" src="https://img.shields.io/badge/-TensorFlow-4A5159?style=flat-square&labelColor=EDE6D5&logo=tensorflow&logoColor=4A5159">
-  <img alt="Unity (XR)" src="https://img.shields.io/badge/-Unity_(XR)-4A5159?style=flat-square&labelColor=EDE6D5&logo=unity&logoColor=4A5159">
-  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-4A5159?style=flat-square&labelColor=EDE6D5&logo=typescript&logoColor=4A5159">
-  <img alt="C++" src="https://img.shields.io/badge/-C%2B%2B-4A5159?style=flat-square&labelColor=EDE6D5&logo=cplusplus&logoColor=4A5159">
-  <img alt="Linux" src="https://img.shields.io/badge/-Linux-4A5159?style=flat-square&labelColor=EDE6D5&logo=linux&logoColor=4A5159">
-</p>
-
-<p align="center"><i>Reach for</i></p>
-<p align="center">
-  <img alt="React" src="https://img.shields.io/badge/-React-9C8F77?style=flat-square&labelColor=EDE6D5&logo=react&logoColor=9C8F77">
-  <img alt="Node.js" src="https://img.shields.io/badge/-Node.js-9C8F77?style=flat-square&labelColor=EDE6D5&logo=nodedotjs&logoColor=9C8F77">
-  <img alt="Docker" src="https://img.shields.io/badge/-Docker-9C8F77?style=flat-square&labelColor=EDE6D5&logo=docker&logoColor=9C8F77">
-  <img alt="C" src="https://img.shields.io/badge/-C-9C8F77?style=flat-square&labelColor=EDE6D5&logo=c&logoColor=9C8F77">
-  <img alt="Git" src="https://img.shields.io/badge/-Git-9C8F77?style=flat-square&labelColor=EDE6D5&logo=git&logoColor=9C8F77">
 </p>
 
 <p align="center">
@@ -294,36 +225,22 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </p>
 
 <!-- ============================================================
-     §04 · OPEN THE WORKSHOP · stats cards + snake graph
+     §03 · OPEN THE WORKSHOP · single comprehensive ledger plate
+     Combines figures, 30-day sparkline, and a full 53-week year grid
+     into one composition. Replaces the prior ledger + Platane/snk
+     snake pair. The snake step is removed from the workflow.
      ============================================================ -->
 
-## §04 · Open the workshop
+## §03 · Open the workshop
 
-<!-- A custom hand-drawn "Workshop Ledger" SVG generated twice daily by
-     .github/workflows/studio.yml + scripts/build-ledger.mjs. Pulls
-     contribution stats via the GitHub GraphQL API, renders an editorial
-     plate with the exact Atelier × Cinema palette. Replaces the
-     external github-readme-stats / streak / activity-graph stack
-     that broke palette discipline (and rate-limited). -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/ledger-dark.svg">
-    <img alt="Workshop ledger · contribution stats for tonyyunyang" src="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/ledger-light.svg">
+    <img alt="Workshop ledger · contribution stats for tonyyunyang" src="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/ledger-light.svg" width="100%">
   </picture>
 </p>
 
-<!-- Snake contribution animation, generated by the same workflow.
-     Static plate above for the figures, animated snake below for
-     the year-at-a-glance grid. -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/github-snake.svg">
-    <img alt="contribution snake eating the contribution grid" src="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/github-contribution-grid-snake.svg">
-  </picture>
-</p>
-
-<p align="center"><sub><i>Both regenerated twice daily by GitHub Actions.</i></sub></p>
+<p align="center"><sub><i>Regenerated twice a day. The figures move, the workshop stays open.</i></sub></p>
 
 <p align="center">
   <picture>
@@ -334,20 +251,20 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </p>
 
 <!-- ============================================================
-     §05 · OFF THE PAGE · personality
+     §04 · OFF THE PAGE · personality
      ============================================================ -->
 
-## §05 · Off the page
+## §04 · Off the page
 
 <table>
 <tr>
 <td valign="top" width="50%">
 
 > Originally from **Sichuan**. Now in **Amsterdam**, by the canals.
-> Cooks **wok-fried Sichuan stir-fry** at home · dried chilis, garlic, peppercorns. Never a covered pot.
+> Cooks Sichuan in a wok at home. Dried chilis, garlic, peppercorns. Never a covered pot.
 
-> Plays **tennis** with a Babolat Pure Drive (and a Wilson Blade for his wife).
-> Half-marathon PB **1:43:53**. Aiming for sub-1:40.
+> Plays **tennis** with a Babolat Pure Drive (his wife uses a Wilson Blade).
+> Half marathon PB **1:43:53**. Aiming for sub 1:40.
 
 </td>
 <td valign="top" width="50%">
@@ -362,7 +279,7 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </tr>
 </table>
 
-<p align="center"><sub><i>For more, step into the <a href="https://tonyyunyang.github.io/world/">Studio</a> · a hand-drawn cross-section of the room.</i></sub></p>
+<p align="center"><sub><i>For more, step into the <a href="https://tonyyunyang.github.io/world/">Studio</a>. A hand-drawn cross-section of the room.</i></sub></p>
 
 <p align="center">
   <picture>
@@ -373,18 +290,18 @@ Reference implementation for our MIDL '25 paper on pruning trained nnU-Net model
 </p>
 
 <!-- ============================================================
-     §06 · CONNECT
+     §05 · CONNECT
      ============================================================ -->
 
-## §06 · Connect
+## §05 · Connect
 
 <table>
 <tr>
 <td valign="top" width="60%">
 
-I read every message. The fastest way to reach me is **email**; for research context, the **personal site** has a richer page.
+I read every message. The fastest way to reach me is **email**. The personal site has more research context if you want it.
 
-For collaborations, PhD opportunities, or research roles in academia or industry · open the door.
+For collaborations, PhD opportunities, or research roles in academia or industry, the door is open.
 
 </td>
 <td valign="top" width="40%" align="right">
@@ -418,7 +335,7 @@ For collaborations, PhD opportunities, or research roles in academia or industry
 <p align="center">
   <i>Built across LLMs, vision, world models, and clinical AI.</i>
   <br>
-  <sub>PLATE GH · OPEN SOURCE · 2026 · AMSTERDAM</sub>
+  <sub>PLATE GH · STUDIO · 2026 · AMSTERDAM</sub>
 </p>
 
 <p align="center">
