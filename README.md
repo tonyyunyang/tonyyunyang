@@ -55,7 +55,7 @@
 <tr>
 <td valign="top" width="62%">
 
-An independent AI researcher in Amsterdam. I work with industry partners (Tencent, Gradient Networks, MeetaVista) and academic groups (TU Delft, McGill, Tsinghua). Three threads run through what I do. Cost efficient large language models. Optimization as reasoning. World models that read intent.
+An independent AI researcher in Amsterdam. I work with industry partners (Tencent, Gradient Networks, MeetaVista) and with academic groups at TU Delft, McGill, and Tsinghua. Three things keep me at the desk. Cost efficient large language models. Optimization that becomes reasoning. World models that read intent.
 
 Before Amsterdam I was a Marie Skłodowska-Curie Fellow at IMDEA Networks in Madrid. Before that, a Research Engineer at TU Delft Imaging Physics. My MSc is from TU Delft, in Computer and Embedded Systems Engineering.
 
@@ -79,7 +79,7 @@ Mostly I want to build AI that is useful, that holds up, and that reaches the pe
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/locator-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/locator-light.svg">
-    <img alt="Now in Amsterdam. The route in order: Shanghai, Shenzhen, Delft, Madrid, Amsterdam." src="./assets/locator-light.svg" width="100%">
+    <img alt="Now in Amsterdam. The route in order, Shanghai then Shenzhen then Delft then Madrid then Amsterdam." src="./assets/locator-light.svg" width="100%">
   </picture>
 </p>
 
@@ -146,7 +146,7 @@ Over 80% of weights in trained nnU-Net models can be removed via simple magnitud
 
 ### §01c · Research compass
 
-<sub><i>Two threads run through every paper here. Pushing AI beyond text, into perception and action. Making those systems fairer and easier to reach in practice.</i></sub>
+<sub><i>The work keeps coming back to two questions. Can AI see more than text? Can capable systems reach more of the people who need them?</i></sub>
 
 <table>
 <tr>
@@ -212,7 +212,7 @@ Over 80% of weights in trained nnU-Net models can be removed via simple magnitud
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
-    <img alt="Workshop kit. Daily: Python, PyTorch, CUDA, LaTeX. Often: TensorFlow, Unity for XR, TypeScript, C++, Linux. On the shelf: React, Node.js, Docker, C, Git." src="./assets/stack-light.svg" width="100%">
+    <img alt="Workshop kit. Daily tools are Python, PyTorch, CUDA, and LaTeX. Often used tools are TensorFlow, Unity for XR, TypeScript, C++, and Linux. Shelf tools are React, Node.js, Docker, C, and Git." src="./assets/stack-light.svg" width="100%">
   </picture>
 </p>
 
@@ -260,26 +260,28 @@ Over 80% of weights in trained nnU-Net models can be removed via simple magnitud
 <tr>
 <td valign="top" width="50%">
 
-> Originally from **Sichuan**. Now in **Amsterdam**, by the canals.
-> Cooks Sichuan in a wok at home. Dried chilis, garlic, peppercorns. Never a covered pot.
+**♁** &nbsp; <sub>Originally from **Sichuan**. Now in **Amsterdam**, by the canals. Cooks Sichuan in a wok at home. Dried chilis, garlic, peppercorns. Never a covered pot.</sub>
 
-> Plays **tennis** with a Babolat Pure Drive (his wife uses a Wilson Blade).
-> Half marathon PB **1:43:53**. Aiming for sub 1:40.
+<br>
+<br>
+
+**☉** &nbsp; <sub>Plays **tennis** with a Babolat Pure Drive (his wife uses a Wilson Blade). Half marathon PB **1 h 43 m 53 s**. Aiming for sub **1 h 40 m**.</sub>
 
 </td>
 <td valign="top" width="50%">
 
-> Reads **Sartre** and the **Boom Latinoamericano** (Borges).
-> Buys **tulips at the Bloemenmarkt** every spring.
+**✿** &nbsp; <sub>Reads **Sartre** and the **Boom Latinoamericano** (Borges). Buys **tulips at the Bloemenmarkt** every spring.</sub>
 
-> Planning to adopt **瓜子**, a 狸花猫 (Chinese mackerel tabby).
-> Writes longhand with a **fountain pen** before any keyboard gets involved.
+<br>
+<br>
+
+**✎** &nbsp; <sub>Planning to adopt **瓜子**, a 狸花猫 (Chinese mackerel tabby). Writes longhand with a **fountain pen** before any keyboard gets involved.</sub>
 
 </td>
 </tr>
 </table>
 
-<p align="center"><sub><i>For more, step into the <a href="https://tonyyunyang.github.io/world/">Studio</a>. A hand-drawn cross-section of the room.</i></sub></p>
+<p align="center"><sub><i>For the rest of the room, step into the Studio (linked above). A hand drawn cross section.</i></sub></p>
 
 <p align="center">
   <picture>
@@ -299,9 +301,9 @@ Over 80% of weights in trained nnU-Net models can be removed via simple magnitud
 <tr>
 <td valign="top" width="60%">
 
-I read every message. The fastest way to reach me is **email**. The personal site has more research context if you want it.
+Email is the fastest way through. I read every one. For research context, the personal site has more.
 
-For collaborations, PhD opportunities, or research roles in academia or industry, the door is open.
+The door is open for collaborations, PhD opportunities, and research roles. Either side, academia or industry.
 
 </td>
 <td valign="top" width="40%" align="right">

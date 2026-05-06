@@ -97,10 +97,16 @@ async function fetchCalendar() {
 }
 
 // ----------------------------------------------------------------- compute
+// Single source of truth for the plate's "as of" date. GitHub's API
+// usually returns no future entries, but we filter defensively so the
+// header date and the streak window always agree.
+const TODAY_ISO = new Date().toISOString().slice(0, 10);
+
 function flattenDays(calendar) {
   const days = [];
   for (const week of calendar.weeks) {
     for (const day of week.contributionDays) {
+      if (day.date > TODAY_ISO) continue;
       days.push({ date: day.date, count: day.contributionCount, weekday: day.weekday });
     }
   }
@@ -243,7 +249,10 @@ function svg(theme, stats, calendar) {
       const x = colX;
       const y = YG_Y + row * colWidth;
       let fill;
-      if (day.contributionCount === 0) fill = withAlpha(t.inkSoft, theme === "dark" ? 0.20 : 0.18);
+      // Future days render as a softer "not yet" tone so the eye reads
+      // them as unfilled rather than zero contributions on a real day.
+      if (day.date > TODAY_ISO) fill = withAlpha(t.inkSoft, theme === "dark" ? 0.10 : 0.09);
+      else if (day.contributionCount === 0) fill = withAlpha(t.inkSoft, theme === "dark" ? 0.20 : 0.18);
       else if (day.contributionCount < 3) fill = withAlpha(t.accent, 0.35);
       else if (day.contributionCount < 6) fill = withAlpha(t.accent, 0.62);
       else if (day.contributionCount < 12) fill = t.accent;
@@ -253,7 +262,11 @@ function svg(theme, stats, calendar) {
     }
   }
 
-  const today = new Date().toISOString().slice(0, 10);
+  // Editorial date string built from the same TODAY_ISO that gates the
+  // streak window, so the header and the figures are guaranteed in sync.
+  const todayMonths = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  const [yIso, mIso, dIso] = TODAY_ISO.split("-").map((s) => parseInt(s, 10));
+  const today = `${todayMonths[mIso - 1]} ${dIso} ${yIso}`;
 
   // Day labels (sparse) on the left of the year grid
   const dayLabelY = (row) => YG_Y + row * colWidth + CELL - 1;
@@ -277,7 +290,7 @@ function svg(theme, stats, calendar) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 580" role="img" aria-label="Workshop ledger · ${theme} · contribution stats for ${USER}">
   <title>Workshop ledger · contribution stats for ${USER}</title>
-  <desc>An editorial plate showing total contributions in the trailing 12 months (${total}), current streak (${current} days), longest streak (${longest} days), a 30-day activity sparkline, and a full year contribution grid. Regenerated twice daily by GitHub Actions.</desc>
+  <desc>An editorial plate showing total contributions in the trailing 12 months (${total}), the current streak (${current} days), the longest streak (${longest} days), a 30 day activity sparkline, and a full year contribution grid. Regenerated twice a day by GitHub Actions.</desc>
   <defs>
     <pattern id="hatch-${theme}" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(35)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="${t.ink}" stroke-width="0.45" opacity="${theme === "dark" ? 0.32 : 0.45}"/>
@@ -311,7 +324,7 @@ function svg(theme, stats, calendar) {
 
   <!-- Header strip -->
   <text x="60" y="50" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="${t.inkSoft}">§ PLATE GH · WORKSHOP LEDGER</text>
-  <text x="820" y="50" text-anchor="end" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="${t.inkSoft}">AS OF ${today.toUpperCase()}</text>
+  <text x="820" y="50" text-anchor="end" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="0.18em" fill="${t.inkSoft}">AS OF ${today}</text>
   <line x1="60" y1="62" x2="820" y2="62" stroke="${t.hairline}" stroke-width="0.7"/>
 
   <!-- Three-column figures -->
@@ -364,23 +377,35 @@ function svg(theme, stats, calendar) {
   <!-- Year grid cells -->
   ${yearCells.join("\n  ")}
 
-  <!-- Peak day annotation: small caret pointing at the cell -->
-  ${peakCellPos ? `<g stroke="${t.ink}" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
-    <path d="M ${peakCellPos.x.toFixed(1)} ${(YG_Y - 6).toFixed(1)} L ${peakCellPos.x.toFixed(1)} ${(YG_Y + 7 * colWidth + 6).toFixed(1)}" stroke-width="0.5" stroke-dasharray="1.5 2.5"/>
-    <circle cx="${peakCellPos.x.toFixed(1)}" cy="${(peakCellPos.y).toFixed(1)}" r="${(CELL / 2 + 2).toFixed(1)}" stroke="${t.ink}" stroke-width="0.7"/>
-  </g>` : ""}
+  <!-- Peak day annotation: small caption sitting above the peak column,
+       arrow pointing down at the highlighted cell. The label, the
+       circle, and the arrow are positioned dynamically so the eye links
+       the figure to the right cell. -->
+  ${peakCellPos && peak ? (() => {
+    const colCenter = peakCellPos.x;
+    // Label slot above the grid (between month labels and grid cells).
+    // Allocate a small box at y = YG_Y - 22, with the count + "↓".
+    const labelY = YG_Y - 22;
+    const labelX = Math.max(YG_X + 28, Math.min(880 - 40, colCenter));
+    return `<g>
+    <text x="${labelX.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="13" fill="${t.ink}">peak ${peak.count} on ${fmtShort(peak.date)}</text>
+    <path d="M ${colCenter.toFixed(1)} ${(labelY + 4).toFixed(1)} L ${colCenter.toFixed(1)} ${(YG_Y - 4).toFixed(1)}" stroke="${t.ink}" stroke-width="0.5" stroke-dasharray="1.5 2.5" fill="none" opacity="0.7"/>
+    <path d="M ${(colCenter - 3).toFixed(1)} ${(YG_Y - 6).toFixed(1)} L ${colCenter.toFixed(1)} ${(YG_Y - 2).toFixed(1)} L ${(colCenter + 3).toFixed(1)} ${(YG_Y - 6).toFixed(1)}" stroke="${t.ink}" stroke-width="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <circle cx="${peakCellPos.x.toFixed(1)}" cy="${(peakCellPos.y).toFixed(1)}" r="${(CELL / 2 + 2).toFixed(1)}" stroke="${t.ink}" stroke-width="0.7" fill="none" opacity="0.7"/>
+  </g>`;
+  })() : ""}
 
   <!-- Legend -->
   <text x="${legendX}" y="${legendY}" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.2em" fill="${t.inkSoft}">QUIETER</text>
   ${legendSwatches.map((c, i) => `<rect x="${legendX + 70 + i * 16}" y="${legendY - 9}" width="12" height="12" rx="2" fill="${c}"/>`).join("\n  ")}
   <text x="${legendX + 70 + legendSwatches.length * 16 + 6}" y="${legendY}" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.2em" fill="${t.inkSoft}">LOUDER</text>
 
-  <!-- Peak day annotation, right-aligned -->
-  <text x="820" y="${legendY}" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="14" fill="${t.ink}">peak day · ${peakLabel}</text>
+  <!-- Right-side caption next to legend, framing the year as a whole -->
+  <text x="820" y="${legendY}" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="13" fill="${t.inkSoft}">${peak ? `${total.toLocaleString()} commits across the year` : "the workshop is between projects"}</text>
 
   <!-- Bottom colophon -->
   <text x="60" y="544" font-family="JetBrains Mono, ui-monospace, Menlo, Consolas, monospace" font-size="9" letter-spacing="0.22em" fill="${t.inkSoft}">REGENERATED TWICE DAILY · GITHUB ACTIONS</text>
-  <text x="820" y="544" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="13" fill="${t.inkSoft}">measure twice, ship once.</text>
+  <text x="820" y="544" text-anchor="end" font-family="EB Garamond, Garamond, Cormorant Garamond, Georgia, serif" font-style="italic" font-size="13" fill="${t.inkSoft}">kept current, kept quiet.</text>
 </svg>
 `;
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 150" role="img" aria-label="Now in Amsterdam. Route: Shanghai, Shenzhen, Delft, Madrid, Amsterdam.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 150" role="img" aria-label="Now in Amsterdam. The route in order, Shanghai then Shenzhen then Delft then Madrid then Amsterdam.">
   <title>Now in Amsterdam · the route in order</title>
-  <desc>A small editorial plate showing the cities Tony has lived in, drawn as a hand-routed line. The current city is the filled accent dot at the right end.</desc>
+  <desc>A small editorial plate showing the cities Tony has lived in, drawn as a hand drawn line. The current city is the filled accent dot at the right end.</desc>
 
   <defs>
     <pattern id="loc-hatch-d" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(35)">
