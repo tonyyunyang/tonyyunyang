@@ -10,6 +10,11 @@ dist/
 # Visual brainstorming companion (superpowers) — local mockups, not published.
 .superpowers/
 
+# Headless preview / screenshot artifacts (local visual checks only).
+.playwright-mcp/
+.preview-*.html
+/*.png
+
 # OS noise
 .DS_Store
 *.swp
