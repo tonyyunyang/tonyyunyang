@@ -32,6 +32,20 @@ function publicationsRows(p) {
   return [ctxCommand, { gap: true }, ...listing];
 }
 
+function projectsRows(p) {
+  const sW = Math.max(...p.rows.map((r) => r.status.length)) + 3;
+  const nW = Math.max(...p.rows.map((r) => r.name.length)) + 3;
+  const cmd = { segs: [{ text: "~/projects $ ", tone: "prompt" }, { text: p.command, tone: "cmd" }] };
+  const listing = p.rows.map((r) => ({
+    segs: [
+      { text: pad(r.status, sW), tone: "amber" },
+      { text: pad(r.name, nW), tone: "cmd" },
+      { text: r.desc, tone: "comment" },
+    ],
+  }));
+  return [cmd, { gap: true }, ...listing];
+}
+
 function tieredRows(s, ctx) {
   const w = Math.max(...s.tiers.map((t) => t.tier.length)) + 2; // for "[tier]"
   const cmd = { segs: [{ text: `~/${ctx} $ `, tone: "prompt" }, { text: s.command, tone: "cmd" }] };
@@ -54,6 +68,7 @@ function keyedRows(block, ctx) {
 
 const panes = {
   publications: { title: cfg.publications.title, rows: publicationsRows(cfg.publications) },
+  projects: { title: cfg.projects.title, rows: projectsRows(cfg.projects) },
   stack: { title: cfg.stack.title, rows: tieredRows(cfg.stack, "stack") },
   life: { title: cfg.life.title, rows: keyedRows(cfg.life, "life") },
   contact: { title: cfg.contact.title, rows: keyedRows(cfg.contact, "contact") },

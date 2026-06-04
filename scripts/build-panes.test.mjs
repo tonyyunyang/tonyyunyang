@@ -5,7 +5,7 @@ import { execFileSync } from "node:child_process";
 
 before(() => execFileSync("node", ["scripts/build-panes.mjs"], { stdio: "inherit" }));
 
-const PANES = ["publications", "stack", "life", "contact"];
+const PANES = ["publications", "projects", "stack", "life", "contact"];
 
 test("every static pane is written in both themes", () => {
   for (const p of PANES) for (const th of ["light", "dark"]) {
@@ -32,6 +32,13 @@ test("publications pane lists all five papers and aligns columns", () => {
 test("stack pane shows the [ai] tier", () => {
   const svg = readFileSync("assets/stack-light.svg", "utf8");
   assert.ok(svg.includes("[ai]"));
+});
+
+test("projects pane lists the curated three", () => {
+  const svg = readFileSync("assets/projects-light.svg", "utf8");
+  for (const name of ["llm-router", "human-intent-world-model", "polymarket-decoder"]) {
+    assert.ok(svg.includes(name), `missing ${name}`);
+  }
 });
 
 test("hero pane exists in both themes and is animated + reduced-motion safe", () => {

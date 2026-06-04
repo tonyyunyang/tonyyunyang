@@ -37,6 +37,15 @@
       { "venue": "MIDL '25", "name": "pruning-nnunet", "desc": "80%+ weights pruned · dice >0.95" }
     ]
   },
+  "projects": {
+    "title": "tony@amsterdam: ~/projects",
+    "command": "ls -lt",
+    "rows": [
+      { "status": "in-progress", "name": "llm-router", "desc": "routing benchmark · NeurIPS '26 under review" },
+      { "status": "in-progress", "name": "human-intent-world-model", "desc": "vlm reads customer intent · with MeetaVista" },
+      { "status": "self-driven", "name": "polymarket-decoder", "desc": "order-book study of prediction markets" }
+    ]
+  },
   "stack": {
     "title": "tony@amsterdam: ~/stack",
     "command": "cat stack.toml",
