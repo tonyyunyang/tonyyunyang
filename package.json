@@ -1,0 +1,12 @@
+{
+  "name": "tonyyunyang-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:panes": "node scripts/build-panes.mjs",
+    "build:ledger": "node scripts/build-ledger.mjs",
+    "test": "node --test"
+  }
+}
