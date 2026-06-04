@@ -21,6 +21,22 @@ test("renderLedger emits a single terminal log pane with a heatmap", () => {
   assert.equal((svg.match(/<\/svg>/g) || []).length, 1);
   assert.ok(svg.includes("git log"), "shows the git log command");
   assert.ok(svg.includes("1,240"), "shows the formatted total");
+  // Busiest day is rendered as a date (fixture peak is 2026-05-14), not a bare count.
+  assert.ok(svg.includes("busiest May 14"), "shows the busiest day as a date");
   // Heatmap cells (one rect per contribution day in the fixture: 14).
   assert.ok((svg.match(/<rect /g) || []).length >= 14, "draws heatmap cells");
+});
+
+test("current streak ignores an in-progress today with no commits", () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const cal2 = {
+    totalContributions: 9,
+    weeks: [{ firstDay: yesterday, contributionDays: [
+      { date: yesterday, contributionCount: 3, weekday: 0 },
+      { date: today, contributionCount: 0, weekday: 1 },
+    ] }],
+  };
+  // Yesterday's commit still counts; today's empty in-progress day must not zero it.
+  assert.equal(computeStats(cal2).current, 1);
 });

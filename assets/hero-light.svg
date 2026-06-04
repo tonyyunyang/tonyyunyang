@@ -6,8 +6,8 @@
     </filter>
   </defs>
   <style>
-  .ln { opacity: 0; animation: appear 0.01s linear forwards; }
-  @keyframes appear { to { opacity: 1; } }
+  .ln { animation: appear 0.01s linear both; }
+  @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
   .ca { animation: blink 1.05s steps(2, start) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {

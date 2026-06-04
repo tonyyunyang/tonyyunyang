@@ -95,7 +95,7 @@
 
 Tony (Tongyun) Yang, Independent AI Researcher in Amsterdam. The scaling race is becoming a systems race; bigger models still matter, but they are not enough; what counts is how we train, route, compress, and ship them. Left my PhD fellowship this spring; open to research roles in academia or industry.
 
-Publications: TwinRouterBench (ACM CAIS 2026), MERA (ACM CAIS 2026), Through the Eyes of Emotion (IMWUT 2025), Reverse Imaging (MICCAI 2025 and IEEE TMI), Pruning nnU-Net (MIDL 2025).
+Publications: TwinRouterBench (ACM CAIS 2026), MERA (ACM CAIS 2026), Through the Eyes of Emotion (IMWUT 2025), Reverse Imaging (MICCAI 2025), Pruning nnU-Net (MIDL 2025).
 
 Projects: LLM Router (routing benchmark with Gradient Networks, under review at NeurIPS 2026), Human Intent World Model (vision-language model for customer intent, with MeetaVista), Polymarket Decoder (self-driven order-book study of prediction markets).
 

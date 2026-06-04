@@ -77,6 +77,5 @@
       { "key": "scholar", "val": "scholar.google.com/citations" },
       { "key": "site", "val": "tonyyunyang.github.io" }
     ]
-  },
-  "footer": "# static svg panes + one live ledger · adaptive light/dark · hand-built, no template"
+  }
 }

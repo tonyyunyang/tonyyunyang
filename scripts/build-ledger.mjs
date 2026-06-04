@@ -19,7 +19,7 @@
 import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { renderTerminal, THEMES } from "./lib/terminal.mjs";
+import { renderTerminal, THEMES, METRICS } from "./lib/terminal.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
@@ -83,7 +83,10 @@ function flattenDays(calendar) {
 
 function streaks(days) {
   let current = 0;
-  for (let i = days.length - 1; i >= 0; i--) {
+  let i = days.length - 1;
+  // An in-progress today with no commits yet should not zero an active streak.
+  if (i >= 0 && days[i].count === 0 && days[i].date === TODAY_ISO) i--;
+  for (; i >= 0; i--) {
     if (days[i].count > 0) current++;
     else break;
   }
@@ -121,6 +124,16 @@ export function computeStats(calendar) {
 }
 
 // ----------------------------------------------------------------- render
+const HEAT_CELL = 11; // contribution-heatmap cell size (px)
+const HEAT_GAP = 3;   // gap between cells (px)
+const HEAT_ROWS = 7;  // weekdays
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function shortDate(iso) {
+  const [, m, d] = iso.split("-").map(Number);
+  return `${MONTHS[m - 1]} ${d}`;
+}
+
 // Contribution heatmap as an SVG fragment positioned under the terminal body.
 // The ramp goes quiet -> loud in the theme accent.
 function heatmap(weeks, theme, originX, originY) {
@@ -128,7 +141,7 @@ function heatmap(weeks, theme, originX, originY) {
   const ramp = theme === "dark"
     ? ["#1B2A26", "#1F4D40", "#2F7D68", t.prompt, "#7BE8CF"]
     : ["#E6DECB", "#BCD3C4", "#7FAE9B", "#3F8A72", t.prompt];
-  const CELL = 11, GAP = 3, col = CELL + GAP;
+  const col = HEAT_CELL + HEAT_GAP;
   let cells = "";
   weeks.forEach((w, x) => {
     w.contributionDays.forEach((d) => {
@@ -136,7 +149,7 @@ function heatmap(weeks, theme, originX, originY) {
       const lvl = n === 0 ? 0 : n < 3 ? 1 : n < 6 ? 2 : n < 12 ? 3 : 4;
       const cx = originX + x * col;
       const cy = originY + d.weekday * col;
-      cells += `<rect x="${cx}" y="${cy}" width="${CELL}" height="${CELL}" rx="2" fill="${ramp[lvl]}"/>`;
+      cells += `<rect x="${cx}" y="${cy}" width="${HEAT_CELL}" height="${HEAT_CELL}" rx="2" fill="${ramp[lvl]}"/>`;
     });
   });
   return cells;
@@ -148,23 +161,27 @@ export function renderLedger(theme, stats) {
     { text: `   ·   current ${stats.current}d`, tone: "out" },
     { text: `   ·   longest ${stats.longest}d`, tone: "out" },
   ];
-  if (stats.peak) statsSegs.push({ text: `   ·   busiest ${stats.peak.count}`, tone: "out" });
+  if (stats.peak) statsSegs.push({ text: `   ·   busiest ${shortDate(stats.peak.date)}`, tone: "out" });
 
+  // Gap rows reserved for the heatmap band, sized from the shared line height
+  // so the band and the heatmap stay in sync if metrics change.
+  const heatHeight = HEAT_ROWS * (HEAT_CELL + HEAT_GAP);
+  const bandRows = Math.ceil(heatHeight / METRICS.LINE_H);
   const rows = [
     { segs: [{ text: "~/log $ ", tone: "prompt" }, { text: 'git log --stat --since="1 year ago"', tone: "cmd" }] },
     { gap: true },
     { segs: statsSegs },
     { gap: true },
-    // Reserved band for the contribution heatmap (7 weekday rows, ~98px tall).
-    { gap: true }, { gap: true }, { gap: true }, { gap: true }, { gap: true },
+    ...Array.from({ length: bandRows }, () => ({ gap: true })),
     { segs: [{ text: "# the year in green · regenerated twice a day by a github action", tone: "comment" }] },
   ];
 
   let svg = renderTerminal({ title: "tony@amsterdam: ~/log", rows, theme });
-  // Splice the heatmap into the reserved band. originY sits just below the
-  // stats line; originX matches the terminal body's left padding (PAD_X = 22).
-  const originX = 22;
-  const originY = 150;
+  // Splice the heatmap into the reserved band. Origin is derived from the shared
+  // terminal metrics (just below the command + stats + separator rows) rather
+  // than hardcoded, so it tracks any layout change in terminal.mjs.
+  const originX = METRICS.PAD_X;
+  const originY = METRICS.BAR_H + METRICS.PAD_TOP + 4 * METRICS.LINE_H - 2;
   svg = svg.replace("</svg>", `  ${heatmap(stats.weeks, theme, originX, originY)}\n</svg>`);
   return svg;
 }
