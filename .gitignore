@@ -7,6 +7,9 @@
 # `output` branch, never committed on main.
 dist/
 
+# Visual brainstorming companion (superpowers) — local mockups, not published.
+.superpowers/
+
 # OS noise
 .DS_Store
 *.swp
