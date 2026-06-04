@@ -65,4 +65,11 @@ for (const [name, pane] of Object.entries(panes)) {
     writeFileSync(resolve(outDir, `${name}-${theme}.svg`), svg);
   }
 }
-console.log(`Wrote ${Object.keys(panes).length * 2} static pane SVGs to assets/`);
+
+// Animated hero (typing effect + blinking caret).
+for (const theme of ["light", "dark"]) {
+  const svg = renderTerminal({ title: cfg.hero.title, rows: cfg.hero.rows, theme, animate: true });
+  writeFileSync(resolve(outDir, `hero-${theme}.svg`), svg);
+}
+
+console.log(`Wrote ${Object.keys(panes).length * 2 + 2} pane SVGs (incl. hero) to assets/`);

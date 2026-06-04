@@ -33,3 +33,12 @@ test("stack pane shows the [ai] tier", () => {
   const svg = readFileSync("assets/stack-light.svg", "utf8");
   assert.ok(svg.includes("[ai]"));
 });
+
+test("hero pane exists in both themes and is animated + reduced-motion safe", () => {
+  for (const th of ["light", "dark"]) {
+    const svg = readFileSync(`assets/hero-${th}.svg`, "utf8");
+    assert.ok(svg.includes("@keyframes"), `hero-${th} has no animation`);
+    assert.ok(svg.includes("prefers-reduced-motion"), `hero-${th} missing reduced-motion guard`);
+    assert.ok(svg.includes("whoami") && svg.includes("systems race"), `hero-${th} missing copy`);
+  }
+});

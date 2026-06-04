@@ -22,7 +22,8 @@
       { "gap": true },
       { "segs": [{ "text": "~ $ ", "tone": "prompt" }, { "text": "open-to-work --roles", "tone": "cmd", "typed": true }] },
       { "segs": [{ "text": "left my PhD fellowship this spring; clearer now on what's next.", "tone": "out" }] },
-      { "segs": [{ "text": "open", "tone": "amber" }, { "text": " to research · academia or industry", "tone": "cmd" }] }
+      { "segs": [{ "text": "open", "tone": "amber" }, { "text": " to research · academia or industry", "tone": "cmd" }] },
+      { "segs": [{ "text": "~ $ ", "tone": "prompt" }] }
     ]
   },
   "publications": {

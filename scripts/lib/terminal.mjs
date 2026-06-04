@@ -29,16 +29,39 @@ const PAD_X = 22;     // body left/right padding
 const PAD_TOP = 18;   // gap below the title bar to the first line
 const PAD_BOT = 18;
 const BAR_H = 38;     // title bar height
+const CHAR_W = 9.02;  // approx advance width of JetBrains Mono at 15px
 
 const TONE_KEY = { prompt: "prompt", cmd: "cmd", out: "out", comment: "comment", amber: "amber" };
 
-function bodyLine(row, t, y) {
+function bodyLine(row, t, y, i = 0, animate = false) {
   if (row.gap) return "";
-  const tspans = row.segs
-    .map((seg) => `<tspan fill="${t[TONE_KEY[seg.tone] || "out"]}">${escapeXml(seg.text)}</tspan>`)
-    .join("");
   // xml:space=preserve keeps leading/trailing spaces used for column alignment.
-  return `<text x="${PAD_X}" y="${y}" xml:space="preserve" font-family="${FONT}" font-size="${FONT_SIZE}">${tspans}</text>`;
+  const span = (seg) => `<tspan fill="${t[TONE_KEY[seg.tone] || "out"]}">${escapeXml(seg.text)}</tspan>`;
+  const mk = (x, segs, extra = "") =>
+    `<text x="${x}" y="${y}"${extra} xml:space="preserve" font-family="${FONT}" font-size="${FONT_SIZE}">${segs.map(span).join("")}</text>`;
+
+  const typedIdx = animate ? row.segs.findIndex((s) => s.typed) : -1;
+  if (typedIdx === -1) {
+    // Static line, or an animated line with no typed segment: one (fading) text element.
+    return mk(PAD_X, row.segs, animate ? ` class="ln ln-${i}"` : "");
+  }
+
+  // Animated typed line: prompt prefix fades in, the command "types" via a widening
+  // clip, an optional suffix follows. The clipped command is positioned at
+  // x = PAD_X + prefixChars*CHAR_W (mono advance) so it sits after the prompt.
+  const cls = ` class="ln ln-${i}"`;
+  const prefix = row.segs.slice(0, typedIdx);
+  const typed = row.segs[typedIdx];
+  const suffix = row.segs.slice(typedIdx + 1);
+  const prefixChars = prefix.reduce((n, s) => n + s.text.length, 0);
+  const typedX = (PAD_X + prefixChars * CHAR_W).toFixed(1);
+  const suffixX = (PAD_X + (prefixChars + typed.text.length) * CHAR_W).toFixed(1);
+
+  let out = "";
+  if (prefix.length) out += mk(PAD_X, prefix, cls);
+  out += `<g clip-path="url(#ty-${i})">${mk(typedX, [typed])}</g>`;
+  if (suffix.length) out += mk(suffixX, suffix, cls);
+  return out;
 }
 
 export function renderTerminal({ title, rows, theme = "light", width = 860, animate = false }) {
@@ -52,7 +75,7 @@ export function renderTerminal({ title, rows, theme = "light", width = 860, anim
     .join("");
 
   const lines = rows
-    .map((row, i) => bodyLine(row, t, bodyTop + i * LINE_H))
+    .map((row, i) => bodyLine(row, t, bodyTop + i * LINE_H, i, animate))
     .filter(Boolean)
     .join("\n  ");
 
@@ -77,7 +100,63 @@ export function renderTerminal({ title, rows, theme = "light", width = 860, anim
 `;
 }
 
-// Static builds have no animation; replaced in Task 5.
-function buildAnimation() {
-  return { style: "", overlay: "" };
+// Animated hero: per-line reveal + typed-command clip reveal + blinking caret.
+// CSS-in-SVG runs when the SVG is loaded via <img> on GitHub, and honors
+// prefers-reduced-motion. Tunables:
+const STEP = 0.55;   // seconds of breathing room after each command block
+const TYPE = 0.5;    // seconds to "type" a command
+
+function buildAnimation(rows, t, bodyTop) {
+  let clip = "";
+  let css = `
+  .ln { opacity: 0; animation: appear 0.01s linear forwards; }
+  @keyframes appear { to { opacity: 1; } }
+  .ca { animation: blink 1.05s steps(2, start) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .ln { opacity: 1; animation: none; }
+    .ty { animation: none; }
+    .ca { animation: none; }
+  }`;
+
+  // Reveal time per row: commands "type"; their outputs follow shortly after.
+  let clock = 0.2;
+  const delays = rows.map((row) => {
+    if (row.gap) return null;
+    const isCmd = row.segs.some((s) => s.typed);
+    const d = clock;
+    clock += isCmd ? TYPE + 0.15 : 0.2;
+    if (isCmd) clock += STEP - 0.2; // breathing room after each command block
+    return d;
+  });
+
+  // Per-row reveal delay; typed commands also get a clip that widens to "type".
+  rows.forEach((row, i) => {
+    if (delays[i] == null) return;
+    css += `\n  .ln-${i} { animation-delay: ${delays[i].toFixed(2)}s; }`;
+    const typed = row.segs.find((s) => s.typed);
+    if (typed) {
+      const prefixChars = row.segs
+        .slice(0, row.segs.indexOf(typed))
+        .reduce((n, s) => n + s.text.length, 0);
+      const typedX = (PAD_X + prefixChars * CHAR_W).toFixed(1);
+      const full = (typed.text.length * CHAR_W).toFixed(1);
+      const top = bodyTop + i * LINE_H - FONT_SIZE;
+      css += `\n  #ty-${i} rect { animation: type-${i} ${TYPE}s steps(${typed.text.length}) ${delays[i].toFixed(2)}s both; }`;
+      css += `\n  @keyframes type-${i} { from { width: 0; } to { width: ${full}px; } }`;
+      // width attribute = full reveal, so the command still shows if CSS is stripped.
+      clip += `<clipPath id="ty-${i}" clipPathUnits="userSpaceOnUse"><rect x="${typedX}" y="${top}" width="${full}" height="${LINE_H}" class="ty"/></clipPath>`;
+    }
+  });
+
+  // Caret rests just after the last visible line and blinks. Wrapped in a .ln group
+  // sharing that line's delay, so it fades in with the line (never floats alone).
+  let lastIdx = rows.length - 1;
+  while (lastIdx >= 0 && rows[lastIdx].gap) lastIdx--;
+  const lastLen = rows[lastIdx].segs.reduce((n, s) => n + s.text.length, 0);
+  const caretX = (PAD_X + lastLen * CHAR_W + 1).toFixed(1);
+  const caretY = bodyTop + lastIdx * LINE_H - FONT_SIZE + 2;
+  const overlay = `<g class="ln ln-${lastIdx}"><rect class="ca" x="${caretX}" y="${caretY}" width="9" height="${FONT_SIZE + 2}" fill="${t.prompt}"/></g>`;
+
+  return { style: `<style>${css}\n  </style><defs>${clip}</defs>`, overlay };
 }
