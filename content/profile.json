@@ -1,0 +1,72 @@
+{
+  "links": {
+    "site": "https://tonyyunyang.github.io",
+    "scholar": "https://scholar.google.com/citations?hl=en&user=rIFdBYAAAAAJ",
+    "email": "tonyyunyang@outlook.com",
+    "github": "https://github.com/tonyyunyang",
+    "cvEn": "https://tonyyunyang.github.io/cv-en.pdf",
+    "cvZh": "https://tonyyunyang.github.io/cv-zh.pdf"
+  },
+  "hero": {
+    "title": "tony@amsterdam: ~",
+    "rows": [
+      { "segs": [{ "text": "~ $ ", "tone": "prompt" }, { "text": "whoami", "tone": "cmd", "typed": true }] },
+      { "segs": [{ "text": "Tony (Tongyun) Yang · 杨童耘", "tone": "amber" }] },
+      { "segs": [{ "text": "Independent AI Researcher · Amsterdam", "tone": "comment" }] },
+      { "gap": true },
+      { "segs": [{ "text": "~ $ ", "tone": "prompt" }, { "text": "cat focus.txt", "tone": "cmd", "typed": true }] },
+      { "segs": [{ "text": "the scaling race is becoming a systems race.", "tone": "cmd" }] },
+      { "segs": [{ "text": "bigger models still matter, but they are not enough.", "tone": "cmd" }] },
+      { "segs": [{ "text": "what counts is how we train, route, compress, and ship them.", "tone": "cmd" }] },
+      { "segs": [{ "text": "building AI that is capable, efficient, and genuinely useful.", "tone": "cmd" }] },
+      { "gap": true },
+      { "segs": [{ "text": "~ $ ", "tone": "prompt" }, { "text": "open-to-work --roles", "tone": "cmd", "typed": true }] },
+      { "segs": [{ "text": "left my PhD fellowship this spring; clearer now on what's next.", "tone": "out" }] },
+      { "segs": [{ "text": "open", "tone": "amber" }, { "text": " to research · academia or industry", "tone": "cmd" }] }
+    ]
+  },
+  "publications": {
+    "title": "tony@amsterdam: ~/publications",
+    "command": "ls -lt",
+    "rows": [
+      { "venue": "ACM CAIS '26", "name": "twinrouterbench", "desc": "agentic LLM routing bench · cuts cost 53%" },
+      { "venue": "ACM CAIS '26", "name": "mera", "desc": "trace-driven routing · 87% acc at ~half cost" },
+      { "venue": "IMWUT '25", "name": "through-the-eyes-of-emotion", "desc": "eye-tracking dataset · emotion in VR" },
+      { "venue": "MICCAI '25", "name": "reverse-imaging", "desc": "any-sequence cardiac MRI segmentation" },
+      { "venue": "MIDL '25", "name": "pruning-nnunet", "desc": "80%+ weights pruned · dice >0.95" }
+    ]
+  },
+  "stack": {
+    "title": "tony@amsterdam: ~/stack",
+    "command": "cat stack.toml",
+    "tiers": [
+      { "tier": "daily", "tools": "python · pytorch · cuda · latex" },
+      { "tier": "ai", "tools": "claude code · codex · cursor · custom harness (coming soon) · pi-agent · harness" },
+      { "tier": "infra", "tools": "vllm · sglang · ray · deepspeed" },
+      { "tier": "often", "tools": "tensorflow · unity · typescript · c++ · linux" },
+      { "tier": "shelf", "tools": "react · node · docker · git" }
+    ]
+  },
+  "life": {
+    "title": "tony@amsterdam: ~/life",
+    "command": "cat .life",
+    "rows": [
+      { "key": "from", "val": "sichuan → now amsterdam" },
+      { "key": "cook", "val": "sichuan wok · never a covered pot" },
+      { "key": "sport", "val": "tennis (pure drive) · half-marathon 1:43:53" },
+      { "key": "read", "val": "sartre · borges · tulips each spring" },
+      { "key": "soon", "val": "adopting 瓜子, a 狸花猫" }
+    ]
+  },
+  "contact": {
+    "title": "tony@amsterdam: ~/contact",
+    "command": "./contact.sh",
+    "rows": [
+      { "key": "email", "val": "tonyyunyang@outlook.com" },
+      { "key": "github", "val": "github.com/tonyyunyang" },
+      { "key": "scholar", "val": "scholar.google.com/citations" },
+      { "key": "site", "val": "tonyyunyang.github.io" }
+    ]
+  },
+  "footer": "# static svg panes + one live ledger · adaptive light/dark · hand-built, no template"
+}
