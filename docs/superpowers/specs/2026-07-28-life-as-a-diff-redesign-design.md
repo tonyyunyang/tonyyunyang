@@ -16,29 +16,38 @@ no publications, badges, stats, or GitHub Actions survive.
 
 ## Final README.md content
 
+Amendments (2026-07-28, from tony): no Trainmore or Frans Otten mentions;
+creative license granted — upgraded to an authentic git-patch framing
+(`diff --git a/tony b/tony` header) so the README reads as the literal diff
+between old life and new. Cat is 煎蛋, a British Shorthair.
+
 The entire file is the following (one diff fence + one `<sub>` footer):
 
 ````markdown
 ```diff
-@@ tony · amsterdam, nl @@
+diff --git a/tony b/tony
+index phd..ai-lab
+--- a/tony
++++ b/tony
+@@ amsterdam, nl @@
 
-- PhD
-+ AI lab
+- phd candidate
++ ai lab founder
 ! news coming soon
 
 @@ current quest @@
-+ building from the bottom up,
++ build from the bottom up,
 + from inference to application
-! status: building with love
+! currently: heads down, building with love
 # inventory: nothing but ideas
 
 @@ daily buffs @@
 + +10 cuddling 煎蛋 the british shorthair
 +  +5 cooking for family
-+  +5 iced Club-Mate
-+  +5 bodybuilding @ trainmore koninginneweg
++  +5 iced club-mate
++  +5 bodybuilding
 +  +5 running vondelpark & amsterdamse bos
-+  +5 tennis @ frans otten
++  +5 tennis
 
 # live as if in the future,
 # and you will be in the future
@@ -53,6 +62,9 @@ The entire file is the following (one diff fence + one `<sub>` footer):
   `@@ … @@` bold purple (pl-mdr), `+` green on green tint (pl-mi1), `-` red on
   red tint (pl-md), `!` amber (pl-mc), `#` muted gray (pl-c). Colorblind
   themes remap hues but the literal `+`/`-` glyphs carry the semantics.
+- Patch-header lines verified 2026-07-28 via `gh api /markdown`:
+  `diff --git …` renders blue (pl-c1), `index …` renders as plain body text,
+  `--- a/tony` red (pl-md), `+++ b/tony` green (pl-mi1).
 - Diff markers must sit at column 0; a leading space kills the styling.
 - Code fences never wrap; keep every line under ~60 display columns so the
   narrow profile column and mobile need no horizontal scroll. CJK characters
