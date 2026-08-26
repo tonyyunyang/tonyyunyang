@@ -1,19 +1,40 @@
+<a href="https://tonytheyang.com/" title="tonytheyang.com · personal site">
+<pre align="center">
+    ___       ___       ___       ___       ___       ___       ___   
+   /\  \     /\  \     /\__\     /\__\     /\  \     /\__\     /\  \  
+   \:\  \   /::\  \   /:| _|_   |::L__L    \:\  \   /:/__/_   /::\  \ 
+   /::\__\ /:/\:\__\ /::|/\__\  |:::\__\   /::\__\ /::\/\__\ /::\:\__\
+  /:/\/__/ \:\/:/  / \/|::/  /  /:;;/__/  /:/\/__/ \/\::/  / \:\:\/  /
+  \/__/     \::/  /    |:/  /   \/__/     \/__/      /:/  /   \:\/  / 
+             \/__/     \/__/                         \/__/     \/__/  
+    ___       ___       ___       ___                                 
+   /\__\     /\  \     /\__\     /\  \                                
+  |::L__L   /::\  \   /:| _|_   /::\  \                               
+  |:::\__\ /::\:\__\ /::|/\__\ /:/\:\__\                              
+  /:;;/__/ \/\::/  / \/|::/  / \:\:\/__/                              
+  \/__/      /:/  /    |:/  /   \::/  /                               
+             \/__/     \/__/     \/__/                                
+
+→ tonytheyang.com
+</pre>
+</a>
+
 ```diff
 diff --git a/tony b/tony
-index phd..ai-lab
+index phd..builder
 --- a/tony
 +++ b/tony
 @@ amsterdam, nl @@
 
 - phd candidate
-+ ai lab founder
-! news coming soon
++ ai researcher & engineer
+! infra → applications
 
 @@ current quest @@
 + build from the bottom up,
-+ from inference to application
++ recursive self-improvement & agent runtimes
 ! currently: heads down, building with love
-# inventory: nothing but ideas
+# inventory: nothing but ideas (yet)
 
 @@ daily buffs @@
 + +10 cuddling 煎蛋 the british shorthair
@@ -27,4 +48,9 @@ index phd..ai-lab
 # and you will be in the future
 ```
 
-<sub><a href="https://tonyyunyang.github.io">tonyyunyang.github.io</a> · <a href="mailto:tonyyunyang@outlook.com">email</a></sub>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/contrib-dark.svg">
+  <img alt="3D isometric GitHub contribution calendar for tonyyunyang" src="https://raw.githubusercontent.com/tonyyunyang/tonyyunyang/output/contrib-light.svg" width="100%">
+</picture>
+
+<sub><a href="https://tonytheyang.com/">tonytheyang.com</a> · <a href="mailto:tonyyunyang@outlook.com">email</a></sub>
